@@ -10,7 +10,7 @@ albumID: "6566646122100832577"
 ---
 <b><span style="font-size:20px">Liebe Freunde!</span></b>
 
-<p style="text-align: justify">um 10.00 Uhr öffnen wir unsere "Tore". Wir freuen uns schon, eine richtig gute
+<p style="text-align: justify">Um 10.00 Uhr öffnen wir unsere "Tore". Wir freuen uns schon, eine richtig gute
 Zeit miteinander zu verbringen <b>(&#35;aufaguadezeit)</b> und haben uns ab <b>13.00 Uhr</b> ein kleines
 Programm für EUCH überlegt:</p>
 
@@ -25,7 +25,7 @@ Programm für EUCH überlegt:</p>
 <br>
 <span style="font-size: 20px">"Hinter den Kulissen"</span>
 <br>
-<span style="font-size: 16px">Martini Sportswear stellt sicht vor</span>
+<span style="font-size: 16px">Martini Sportswear stellt sich vor</span>
 <br>
 <span style="font-size: 12px"><b>(&#35;martinisportswear &#35;designyoursports)</b></span>
 <br>
