@@ -17,6 +17,6 @@ footer:
         target: ''
         type: internal
       - title: Unpersönlich
-        url: https://www.facebook.com/tom.brandstore.tirol
+        url: fb://profile/100024959831617
         target: _blank
         type: external
