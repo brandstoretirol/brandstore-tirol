@@ -16,7 +16,15 @@ footer:
         url: /shop
         target: ''
         type: internal
-      - title: Unpersönlich
+      - title: Facebook App
         url: fb://profile/100024959831617
+        target: _blank
+        type: external
+      - title: Facebook
+        url: https://www.facebook.com/tom.brandstore.tirol
+        target: _blank
+        type: external
+      - title: Instagram
+        url: https://www.instagram.com/brandstore.tirol
         target: _blank
         type: external
