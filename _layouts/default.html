@@ -103,7 +103,14 @@
 
         <!-- bei bedarf aktivieren-->
         <div class="caption banner-text hoverable" style="text-align: center;">   
-          <p class="light black-text text-lighten-3 flow-text">{{ banner.text3 }}</p>
+          <p class="light black-text text-lighten-3 flow-text"> 
+            <video width="80%" controls="" style="max-width: 350px;">
+              <source src="/assets/videos/BS_coming_soon_1.mp4" type="video/mp4">
+              Dein Browser unterstützt kein HTML5 Video
+            </video>
+            <br>
+            {{ banner.text3 }}
+          </p>
 
           <!--<video width="100%" controls="" style="max-height: 100%;">
                   <source src="/assets/videos/BS_coming_soon_1.mp4" type="video/mp4">
@@ -180,11 +187,14 @@
       max-width: 100%;
       background-color: rgba(255, 153, 0, 0.8);
       border: 1px solid black;
-      padding: 20px;
+      /*padding: 20px;*/ /*ohne video*/
+      padding: 1px; /*mit video*/
       position: absolute;
       border-radius: 0px;
-      top: 15%;
-      bottom: 15%;
+      /*top: 15%;
+      bottom: 15%;*/ /*ohne video*/
+      top: 5%;
+      bottom: 5%; /*mit video*/
       left: 15.8%;
       width: 68.6%;
       opacity: 1; }
