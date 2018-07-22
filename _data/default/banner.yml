@@ -20,10 +20,11 @@ banner:
             <br>
             BRANDSTORE.TIROL <b>(&#35;brandstoretirol)</b>... eine Geschichte wird Programm <b>(&#35;lebdeilebn)</b>
             <br>
-    text3: >          
-            <span style="font-size: 30px">DIE GROSSE ERÖFFNUNG</span>
+    text3: >
+            #20px mit video        
+            <span style="font-size: 20px">DIE GROSSE ERÖFFNUNG</span>
             <br>
-            <span style="font-size: 30px">AM 13.10.2018</span>
+            <span style="font-size: 20px">AM 13.10.2018</span>
             <br>
             Nähere Infos findest du im <u><a class="white-text" href="https://brandstore.tirol/news/2018-06-01-Eroeffnungsfeier.html">PROGRAMM</a></u>
             <br>
@@ -41,10 +42,10 @@ banner:
     #greetings:
 
 # - title: 
-#    text:
-#    text2:
-#    text3:
-#    img-url: banner_main2.png
-#    hashtag:
-#    greetings:
+    #text:
+    #text2:
+    #text3:
+    #img-url: banner_main2.png
+    #hashtag:
+    #greetings:
 
