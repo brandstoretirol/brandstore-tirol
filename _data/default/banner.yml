@@ -32,14 +32,14 @@ banner:
     greetings: Euer Tom!
 
 #slide show images
- - title: 
-    text:
-    text2:
-    text3:
-    img-url: banner_main2.png
-    hashtag:
-    greetings:
-      
+      - title: 
+            text:
+            text2:
+            text3:
+            img-url: banner_main2.png
+            hashtag:
+            greetings:
+
 # - title: 
 #    text:
 #    text2:
