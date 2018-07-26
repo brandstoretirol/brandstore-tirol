@@ -644,7 +644,8 @@
   padding : 10px 10px;
   font-size: 1.2em;
 	cursor: pointer;
-  display:block;
+	display:block;
+	text-align: justify;
 }
 @media only screen and (max-device-width : 480px) {
   .nGY2PopupContent {
