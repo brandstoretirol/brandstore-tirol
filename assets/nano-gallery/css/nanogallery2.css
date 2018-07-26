@@ -602,12 +602,12 @@
   top: 50%;
   left: 50%;
 	width: 50%;
-	height: 50%;
-	overflow: scroll;
-  padding: 15px 30px;
+	padding: 15px 30px;
   /*max-width: 630px;
   min-width: 320px;*/
-  height: auto;
+	/*height: auto;*/
+	height: 50%;
+	overflow: scroll;
   background: #fff;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
