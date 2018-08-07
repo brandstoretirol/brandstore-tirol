@@ -10,8 +10,9 @@ ambassador: brands.martini_sportswear.martini_sportswear_men.martini_sportswear_
 {% endcapture %}
 
 </div>
+
 {% include teaser/martini_sportswear_men-teaser.html martini_sportswear_men=martini_sportswear_men %}
- <script>
+<script>
 	function init_gallery(albumID){
 	
 		if(typeof($('#nanogalleryGeneric')) != "undefined"){
@@ -24,6 +25,7 @@ ambassador: brands.martini_sportswear.martini_sportswear_men.martini_sportswear_
 		$('#galleryContainer').append(e);
 		
 		$("#nanogalleryGeneric").nanogallery2({
+			
 			"userID": "102674011871822108337",
 			"kind": "google2",
 			"google2URL": "https://brandstore.at/nanogp/nanogp.php",
@@ -37,11 +39,13 @@ ambassador: brands.martini_sportswear.martini_sportswear_men.martini_sportswear_
 				}
 			  },
 			  "thumbnailLabel": {
-				"display": false
+				"display": false,
+				"descriptionMultiLine": true
 			  },
 			  "galleryDisplayMode": "pagination",
 				"galleryMaxRows": 3,
 				"gallerySorting": "titleAsc",
+				"allowHTMLinData": "true",
 			  "thumbnailAlignment": "center"
 		});
 	}
@@ -49,28 +53,56 @@ ambassador: brands.martini_sportswear.martini_sportswear_men.martini_sportswear_
 	$( document ).ready(function(){
 		document.getElementById("anchor_jacken").click(); // first tab select
 	});
-
-  </script>
+</script>
+	
 <div class="container">
 
-<div class="row">
-  <div class="col s12">
-	{% for martini_sportswear_men in site.data.brands.martini_sportswear_groups.martini_sportswear_men.martini_sportswear_men %}
-    <h6>HERRENKOLLEKTION</h6>
-    <hr style="margin-left: 0px;margin-right: 0px;">
-  {% endfor %}
-  </div>
-</div>
-<div class="row">
-  <div class="col s12">
+	<div class="row">
+		<div class="col s12">
+		{% for martini_sportswear_men in site.data.brands.martini_sportswear_groups.martini_sportswear_men.martini_sportswear_men %}
+			<h6>DAMENKOLLEKTION</h6>
+			<hr style="margin-left: 0px;margin-right: 0px;">
+		{% endfor %}
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col s12">
+			
+			<!-- BMS Gallery -->
+			<div data-nanogallery2='{
+					"itemsBaseURL": "http://brandstore.at/Images/Artikel/Martini/Winter_18_19/Herren/",
+					"thumbnailWidth": "auto",
+					"thumbnailBorderVertical": 1,
+					"thumbnailBorderHorizontal": 1,
+					"colorScheme": {
+						"thumbnail": {
+							"background": "rgba(0,0,0,1)"
+						}
+					},
+					"thumbnailLabel": {
+						"position": "onBottom",
+						"displayDescription": false,
+						"descriptionMultiLine": true
+					},
+					"allowHTMLinData": true,
+					"galleryDisplayMode": "pagination",
+					"galleryMaxRows": 3,
+					"thumbnailAlignment": "center",
+					"gallerySorting": "titleasc",
+					"galleryFilterTags": "description",
+					"thumbnailLevelUp": true
+				}'>
+				{% include gallery/gallery_content_men.html %}
+			</div>
+
+			<!-- google gallery
 			<div class="tabs" style="background-color: black;">
-      {% for impression in site.data.brands.martini_sportswear_groups.martini_sportswear_men.impressionen_martini_sportswear_men %}
-        <li class="tab col s3"><a id="anchor_{{impression.id}}" href="#galleryContainer" onclick="init_gallery('{{impression.albumID}}')" class="white-text" style="border-bottom-color: black;">{{impression.collections}}</a></li>
-      {% endfor %}
-    </div>    
-  </div>
-  <div class="col s12 gallery-wrapper" id="galleryContainer">
-  </div>
-</div>
-</div>
+					{% for impression in site.data.brands.martini_sportswear_groups.martini_sportswear_men.impressionen_martini_sportswear_men %}
+						<li class="tab col s3"><a id="anchor_{{impression.id}}" href="#galleryContainer" onclick="init_gallery('{{impression.albumID}}')" class="white-text" style="border-bottom-color: black;">{{impression.collections}}</a></li>
+					{% endfor %}
+			</div> -->
+			
+		</div>
+		<div class="col s12 gallery-wrapper" id="galleryContainer"></div>
 </div>
