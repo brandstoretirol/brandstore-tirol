@@ -2,11 +2,20 @@
 martini_sportswear_accessoires:
 - title: ACCESSOIRES
   info: >
-        Kinder stellen im Winter hohe Anforderungen. Ganz spielerisch. Deshalb ist „Mini-Martini“, die Martini 
-        Sportswear-Kollektion für Kinder, so groß ausgestattet, dass Kälte und Nässe eine Kleinigkeit sind. 
-        Aufwendig verarbeitet, perfekt ausgestattet, in coolen Farbkombis. Leichtigkeit, tolle Verarbeitung und 
-        Top-Materialien, wie PrimaLoft® Gold – in der KIDS-Kollektion ist alles drinnen, damit draußen beim 
-        kindlichen Schneetreiben alles bestens ist.
+        MODISCHE ACCESSOIRES FÜR DAMEN IM WINTER
+        Spaß macht der Wintersport und die Winteraktivität dann, wenn man nicht friert. Zu der passenden Damen 
+        Winterjacke sowie Winterhose gehört das richtige Winter Accessoire und Zubehör, um den Look komplett zu 
+        machen. Martini Stirnbänder und Mützen bestehen aus funktionellem Polartec® Stretch® Material und bieten 
+        optimalen Schutz gegen Wind und Kälte.
+        <br>
+        Sie punkten mit Leichtigkeit, Funktion und optimaler Wärmeisolation bei Skitouren, Skifahren, Freeride, 
+        Laufen, Langlaufen und allen anderen sportlichen Aktivitäten.
+        Von einer optimal passenden Wintermütze und einem perfekt sitzenden Stirnband sollte man sich nicht 
+        eingeengt fühlen. Sie müssen Wärme gut isolieren und somit besonders warmhalten, gleichzeitig für einen 
+        perfekten Halt sorgen und die moderne Optik und ein angesagter Schnitt dürfen auch nicht fehlen. 
+        Auch der richtige Handschuh muss sitzen. Martini Sportswear überzeugt auch hier mit funktioneller 
+        Power-Stretch® und PrimaLoft® Gold Qualität, und sorgt für den perfekten Kälteschutz und den optimalen 
+        Feuchtigkeitstransport. Was diese kleinen Helden leisten, merkt man erst, wenn man sie mal vergessen hat.
   info2: 
   img-url: assets/img/banner/martini_sportswear_brandlogo.png
   url: martini_sportswear_accessoires
@@ -14,6 +23,7 @@ martini_sportswear_accessoires:
   links: 
         <u><a class="grey-text" href="https://brandstore.tirol/martini_sportswear_women">DAMEN</a></u>
         <u><a class="grey-text" href="https://brandstore.tirol/martini_sportswear_men">HERREN</a></u>
+        <u><a class="grey-text" href="https://brandstore.tirol/martini_sportswear_kids">KIDS</a></u>
   greetings:
 
 # IMPRESSIONEN
