@@ -2962,7 +2962,6 @@
             break;
           case 'RECTANGLES':
             c = 'nGY2paginationRectangle';
-            p = i + 1;
             break;
         }
         if( i == G.GOM.pagination.currentPage ) {
