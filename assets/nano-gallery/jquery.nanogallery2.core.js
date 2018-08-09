@@ -2980,7 +2980,7 @@
       }
 
       // display "next"
-      if( G.O.galleryPaginationMode == 'RECTANGLES' ) {
+      if( G.O.galleryPaginationMode == 'RECTANGLES' && G.GOM.pagination.currentPage == 1 ) {
         var $eltNext = jQuery('<div class="nGY2PaginationNext">' + G.O.icons.paginationNext + '</div>').appendTo(G.$E.conTnBottom);
         $eltNext.click( function(e) {
           paginationNextPage();
