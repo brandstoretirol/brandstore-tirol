@@ -2986,13 +2986,6 @@
           paginationNextPage();
         });
       }
-      //display next rect
-      if( G.O.galleryPaginationMode == 'RECTANGLES' && G.GOM.pagination.currentPage >= 0 ) {
-        var $eltNext = jQuery('<div class="nGY2PaginationPrev">' + G.O.icons.paginationPrevious + '</div>').appendTo(G.$E.conTnBottom);
-        $eltNext.click( function(e) {
-          paginationNextPage();
-        });
-      }
 
       G.$E.conTnBottom.css('opacity', 1);
 
