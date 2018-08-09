@@ -2986,9 +2986,9 @@
           paginationNextPage();
         });
       }
-
+      //display next rect
       if( G.O.galleryPaginationMode == 'RECTANGLES' && G.GOM.pagination.currentPage >= 0 ) {
-        var $eltNext = jQuery('<div class="nGY2PaginationNext">' + G.O.icons.paginationNext + '</div>').appendTo(G.$E.conTnBottom);
+        var $eltNext = jQuery('<div class="nGY2PaginationPrev">' + G.O.icons.paginationPrevious + '</div>').appendTo(G.$E.conTnBottom);
         $eltNext.click( function(e) {
           paginationNextPage();
         });
