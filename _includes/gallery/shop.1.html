@@ -1,18 +1,18 @@
 ---
 layout: default
-title: MARTINI SPORTSWEAR
-permalink: /martini_sportswear
-brand: brands.martini_sportswear.martini_sportswear
+title: SHOP
+permalink: /shop
+shop: shops.shop_info.shop_info
 ---
 
-  {% capture martini_sportswear %}
-    {{page.martini_sportswear}}
+  {% capture shop %}
+    {{page.shop}}
   {% endcapture %}
 
   </div>
-	{% include teaser/martini_sportswear-teaser.html martini_sportswear=martini_sportswear %}
-
-  <script>
+  {% include teaser/shop-teaser.html shop=shop %}
+  
+   <script>
 	function init_gallery(albumID){
 	
 		if(typeof($('#nanogalleryGeneric')) != "undefined"){
@@ -48,24 +48,14 @@ brand: brands.martini_sportswear.martini_sportswear
 	}
 	
 	$( document ).ready(function(){
-		document.getElementById("anchor_ACTION").click();
+		document.getElementById("anchor_AKTUELLES").click(); // first tab select
 	});
 
-	</script>
-
+  </script>
   <div class="container">
-		
-		<!-- klassifizierung -->
-		<div class="row" style="background-color: white; color: black">
-
-				{% assign martini_groups = site.data.brands.martini_groups %}
-				{% include card.html item=martini_groups size="s12 m3" %}
-			
-		</div>
-
   <div class="row">
     <div class="col s12">
-    {% for brand in site.data.brands.martini_sportswear.martini_sportswear %}
+    {% for shop in site.data.shops.shop_info.shop_info %}
       <h6>IMPRESSIONEN</h6>
       <hr style="margin-left: 0px;margin-right: 0px;">
     {% endfor %}
@@ -74,9 +64,9 @@ brand: brands.martini_sportswear.martini_sportswear
 
   <div class="row">
     <div class="col s12">
-			<div class="tabs" style="background-color: black;">
-        {% for impression in site.data.brands.martini_sportswear.impressionen_martini_sportswear %}
-			<li class="tab col s3"><a id="anchor_{{impression.collections}}" href="#galleryContainer" onclick="init_gallery('{{impression.albumID}}')" class="white-text" style="border-bottom-color: black;">{{impression.collections}}</a></li>
+				<div class="tabs" style="background-color: black;">
+        {% for impression in site.data.shops.shop_info.impressionen_shop %}
+          <li class="tab col s3"><a id="anchor_{{impression.collections}}" href="#galleryContainer" onclick="init_gallery('{{impression.albumID}}')" class="white-text" style="border-bottom-color: black;">{{impression.collections}}</a></li>
         {% endfor %}
       </div>    
     </div>
@@ -84,7 +74,7 @@ brand: brands.martini_sportswear.martini_sportswear
     <div class="col s12 gallery-wrapper" id="galleryContainer">
 
     </div>
-    {% include gallery/shop.1.html %}
-  </div> 
+  </div>
+  
 </div>
 </div>
