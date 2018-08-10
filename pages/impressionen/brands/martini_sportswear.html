@@ -92,7 +92,7 @@ brand: brands.martini_sportswear.martini_sportswear
 <!-- 2. galerie-->
 
 <script>
-function init_gallery(albumID){
+function init_gallery(albumID2){
 
 	if(typeof($('#nanogalleryGeneric')) != "undefined"){
 		$('#nanogalleryGeneric').nanogallery2("destroy");
@@ -101,13 +101,13 @@ function init_gallery(albumID){
 	
 	var e = document.createElement("div");
 	$(e).attr('id','nanogalleryGeneric');
-	$('#galleryContainer').append(e);
+	$('#galleryContainer2').append(e);
 	
 	$("#nanogalleryGeneric").nanogallery2({
 		"userID": "102674011871822108337",
 		"kind": "google2",
 		"google2URL": "https://brandstore.at/nanogp/nanogp.php",
-		"album": albumID,
+		"album": albumID2,
 		"thumbnailWidth": "auto",
 			"thumbnailBorderVertical": 1,
 			"thumbnailBorderHorizontal": 1,
@@ -144,7 +144,7 @@ $( document ).ready(function(){
 	<div class="col s12">
 		<div class="tabs" style="background-color: black;">
 			{% for impression_action in site.data.brands.martini_sportswear_action.impressionen_martini_sportswear_action %}
-		<li class="tab col s3"><a id="anchor_{{impression_action.collections}}" href="#galleryContainer2" onclick="init_gallery('{{impression_action.albumID}}')" class="white-text" style="border-bottom-color: black;">{{impression_action.collections}}</a></li>
+		<li class="tab col s3"><a id="anchor_{{impression_action.collections}}" href="#galleryContainer2" onclick="init_gallery('{{impression_action.albumID2}}')" class="white-text" style="border-bottom-color: black;">{{impression_action.collections}}</a></li>
 			{% endfor %}
 		</div>    
 	</div>
