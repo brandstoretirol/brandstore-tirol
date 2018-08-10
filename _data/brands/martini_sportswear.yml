@@ -39,9 +39,9 @@ martini_sportswear:
 
 # Impressionen
 impressionen_martini_sportswear:
-- collections: ACTION
-  id: action
-  albumID: "6558392027930808369"
+#- collections: ACTION
+#  id: action
+#  albumID: "6558392027930808369"
 
 - collections: AKTUELL
   id: aktuell
