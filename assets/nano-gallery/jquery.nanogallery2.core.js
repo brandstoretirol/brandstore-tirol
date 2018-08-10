@@ -8322,6 +8322,7 @@
 
       var content = '<div class="nGY2PopupOneItemText">' + item.description + '</div>';
       
+      //wird nicht benötig 180810 TM - title über bms
       //var content = '<div class="nGY2PopupOneItemText">' + item.title + '</div>';
       //content    += '<div class="nGY2PopupOneItemText">' + item.description + '</div>';
       
