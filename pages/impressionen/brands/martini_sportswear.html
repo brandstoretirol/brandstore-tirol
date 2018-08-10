@@ -55,6 +55,14 @@ brand: brands.martini_sportswear.martini_sportswear
 
 	<!--ACTION GALLERY-->
 	<div class="container">
+			
+			<!-- klassifizierung -->
+			<div class="row" style="background-color: white; color: black">
+
+					{% assign martini_groups = site.data.brands.martini_groups %}
+					{% include card.html item=martini_groups size="s12 m3" %}
+				
+			</div>
 
 			<div class="row">
 					<div class="col s12">
@@ -93,16 +101,15 @@ brand: brands.martini_sportswear.martini_sportswear
 			</div>
 		</div>
 	
-
   <div class="container">
 		
-		<!-- klassifizierung -->
+		<!-- klassifizierung
 		<div class="row" style="background-color: white; color: black">
 
 				{% assign martini_groups = site.data.brands.martini_groups %}
 				{% include card.html item=martini_groups size="s12 m3" %}
 			
-		</div>
+		</div> -->
 
   <div class="row">
     <div class="col s12">
@@ -126,7 +133,7 @@ brand: brands.martini_sportswear.martini_sportswear
 		</div> 
 	</div>
 
-	<!--ACTION GALLERY-->
+	<!--ACTION GALLERY
 	<div class="container">
 
 		<div class="row">
@@ -164,6 +171,6 @@ brand: brands.martini_sportswear.martini_sportswear
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>-->
 
 </div>
