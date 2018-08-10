@@ -8320,8 +8320,9 @@
     // Display photo infos
     function ItemDisplayInfo( item) {
 
-      var content = '<div class="nGY2PopupOneItemText">' + item.title + '</div>';
-      content    += '<div class="nGY2PopupOneItemText">' + item.description + '</div>';
+      var content = '<div class="nGY2PopupOneItemText">' + item.description + '</div>';
+      //var content = '<div class="nGY2PopupOneItemText">' + item.title + '</div>';
+      //content    += '<div class="nGY2PopupOneItemText">' + item.description + '</div>';
       
       //wird nicht benötig 180527 TM
       //if( item.author != '' ) {
