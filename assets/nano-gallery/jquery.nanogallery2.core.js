@@ -1319,7 +1319,7 @@
     
     viewer :                      'internal',
     viewerFullscreen:             false,
-    viewerDisplayLogo :           true,
+    viewerDisplayLogo :           false,
     imageTransition :             'swipe',
     viewerTransitionMediaKind :   'img',
     viewerZoom :                  true,
