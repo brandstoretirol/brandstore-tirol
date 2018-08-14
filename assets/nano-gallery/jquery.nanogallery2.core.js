@@ -1323,7 +1323,7 @@
     imageTransition :             'swipe',
     viewerTransitionMediaKind :   'img',
     viewerZoom :                  true,
-    viewerImageDisplay :          '',
+    viewerImageDisplay :          'bestImageQuality',
     openOnStart :                 '',
     viewerHideToolsDelay :        3000,
     viewerToolbar : {
