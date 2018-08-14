@@ -8,8 +8,8 @@ date: 2018-10-13
 active: ja
 albumID: "6566646122100832577"
 ---
-<div style="text-align:center; background-color:black;">
-<iframe width="249" height="109" src="https://w2.countingdownto.com/2239683" frameborder="0"></iframe>
+<div style="text-align:center; background-color:#000000;">
+<iframe width="249" height="85" src="https://w2.countingdownto.com/2239683" frameborder="0"></iframe>
 </div>
 
 <b><span style="font-size:20px">Liebe Freunde!</span></b>
