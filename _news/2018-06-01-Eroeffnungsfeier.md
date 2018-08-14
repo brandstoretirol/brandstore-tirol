@@ -11,7 +11,6 @@ albumID: "6566646122100832577"
 <div style="text-align:center;">
 <iframe width="248" height="170" src="https://w2.countingdownto.com/2239683" frameborder="0"></iframe>
 </div>
-<br>
 
 <b><span style="font-size:20px">Liebe Freunde!</span></b>
 
