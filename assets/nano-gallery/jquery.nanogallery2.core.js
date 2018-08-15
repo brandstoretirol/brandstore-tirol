@@ -1335,7 +1335,7 @@
       //standard :                  'minimizeButton,label',
       standard :                  'infoButton,shareButton,linkOriginalButton,fullscreenButton,cartButton',
       //minimized :                 'minimizeButton,label,infoButton,shareButton,downloadButton,linkOriginalButton,fullscreenButton'
-      minimized :                 'infoButton,shareButton,linkOriginalButton,fullscreenButton'
+      minimized :                 'infoButton,shareButton,linkOriginalButton,fullscreenButton,cartButton'
     },
     viewerTools : {
       topLeft :                   'pageCounter,playPauseButton',
