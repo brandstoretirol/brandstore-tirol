@@ -1333,9 +1333,9 @@
       align :                     'center',
       autoMinimize :              true,
       //standard :                  'minimizeButton,label',
-      standard :                  'infoButton,shareButton,linkOriginalButton,fullscreenButton,cartButton',
+      standard :                  'infoButton,shareButton,linkOriginalButton,fullscreenButton',
       //minimized :                 'minimizeButton,label,infoButton,shareButton,downloadButton,linkOriginalButton,fullscreenButton'
-      minimized :                 'infoButton,shareButton,linkOriginalButton,fullscreenButton,cartButton'
+      minimized :                 'infoButton,shareButton,linkOriginalButton,fullscreenButton'
     },
     viewerTools : {
       topLeft :                   'pageCounter,playPauseButton',
