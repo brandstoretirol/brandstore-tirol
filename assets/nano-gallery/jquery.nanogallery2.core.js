@@ -1333,7 +1333,7 @@
       align :                     'center',
       autoMinimize :              true,
       //standard :                  'minimizeButton,label',
-      standard :                  'infoButton,shareButton,linkOriginalButton,fullscreenButton',
+      standard :                  'infoButton,shareButton,linkOriginalButton,fullscreenButton,cartButton',
       //minimized :                 'minimizeButton,label,infoButton,shareButton,downloadButton,linkOriginalButton,fullscreenButton'
       minimized :                 'infoButton,shareButton,linkOriginalButton,fullscreenButton'
     },
