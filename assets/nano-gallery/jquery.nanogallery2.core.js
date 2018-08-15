@@ -1231,7 +1231,7 @@
     paginationSwipe:              true,
     paginationVisiblePages :      10,
     // paginationSwipeSensibilityVert : 10,
-    galleryFilterTags :           'description',    // possible values: false, true, 'title', 'description'
+    galleryFilterTags :           false,    // possible values: false, true, 'title', 'description'
     galleryL1FilterTags :         null,     // possible values: false, true, 'title', 'description'
     galleryMaxItems :             0,        // maximum number of items per album  --> only flickr, google+, nano_photos_provider2
     galleryL1MaxItems :           null,     // maximum number of items per gallery page --> only flickr, google+, nano_photos_provider2
