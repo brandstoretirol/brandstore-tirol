@@ -10,8 +10,12 @@ brand: brands.martini_sportswear.martini_sportswear
   {% endcapture %}
 
   </div>
+<<<<<<< HEAD
 	{% include teaser/martini_sportswear-teaser.html martini_sportswear=martini_sportswear %}
 
+=======
+  {% include teaser/brand-teaser.html brand=brand %}
+>>>>>>> 0028876a0fb35fd0804112326cfdbf92b6efd92a
   <script>
 	function init_gallery(albumID){
 	
@@ -27,7 +31,11 @@ brand: brands.martini_sportswear.martini_sportswear
 		$("#nanogalleryGeneric").nanogallery2({
 			"userID": "102674011871822108337",
 			"kind": "google2",
+<<<<<<< HEAD
 			"google2URL": "https://brandstore.at/nanogp/nanogp.php",
+=======
+			"google2URL": "https://brandstore.tirol/nanogp/nanogp.php",
+>>>>>>> 0028876a0fb35fd0804112326cfdbf92b6efd92a
 			"album": albumID,
 			"thumbnailWidth": "auto",
 			  "thumbnailBorderVertical": 1,
@@ -41,8 +49,12 @@ brand: brands.martini_sportswear.martini_sportswear
 				"display": false
 			  },
 			  "galleryDisplayMode": "pagination",
+<<<<<<< HEAD
 				"galleryMaxRows": 3,
 				"gallerySorting": "random",
+=======
+			  "galleryMaxRows": 3,
+>>>>>>> 0028876a0fb35fd0804112326cfdbf92b6efd92a
 			  "thumbnailAlignment": "center"
 		});
 	}
@@ -51,6 +63,7 @@ brand: brands.martini_sportswear.martini_sportswear
 		document.getElementById("anchor_AKTUELL").click();
 	});
 
+<<<<<<< HEAD
 	</script>
 
 	<!--ACTION GALLERY-->
@@ -106,6 +119,9 @@ brand: brands.martini_sportswear.martini_sportswear
 		</div>
 	
 	<!--MARTINI GALLERY-->
+=======
+  </script>
+>>>>>>> 0028876a0fb35fd0804112326cfdbf92b6efd92a
   <div class="container">
 		
 		<!-- klassifizierung -->
@@ -124,6 +140,7 @@ brand: brands.martini_sportswear.martini_sportswear
     <div class="col s12">
 			<div class="tabs" style="background-color: black;">
         {% for impression in site.data.brands.martini_sportswear.impressionen_martini_sportswear %}
+<<<<<<< HEAD
 			<li class="tab col s3"><a id="anchor_{{impression.collections}}" href="#galleryContainer" onclick="init_gallery('{{impression.albumID}}')" class="white-text" style="border-bottom-color: black;">{{impression.collections}}</a></li>
         {% endfor %}
       </div>    
@@ -173,4 +190,17 @@ brand: brands.martini_sportswear.martini_sportswear
 		</div>
 	</div>-->
 
+=======
+			<li class="tab col s3"><a id="anchor_{{impression.collections}}" href="#galleryContainer" onclick="init_gallery('{{impression.albumID}}')" class="black-text" style="border-bottom-color: black;">{{impression.collections}}</a></li>
+        {% endfor %}
+      </div>    
+    </div>
+    
+    <div class="col s12 gallery-wrapper" id="galleryContainer">
+
+    </div>
+    
+  </div> 
+</div>
+>>>>>>> 0028876a0fb35fd0804112326cfdbf92b6efd92a
 </div>

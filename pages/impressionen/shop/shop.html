@@ -27,7 +27,11 @@ shop: shops.shop_info.shop_info
 		$("#nanogalleryGeneric").nanogallery2({
 			"userID": "102674011871822108337",
 			"kind": "google2",
+<<<<<<< HEAD
 			"google2URL": "https://brandstore.at/nanogp/nanogp.php",
+=======
+			"google2URL": "https://brandstore.tirol/nanogp/nanogp.php",
+>>>>>>> 0028876a0fb35fd0804112326cfdbf92b6efd92a
 			"album": albumID,
 			"thumbnailWidth": "auto",
 			  "thumbnailBorderVertical": 1,
@@ -41,15 +45,27 @@ shop: shops.shop_info.shop_info
 				"display": false
 			  },
 			  "galleryDisplayMode": "pagination",
+<<<<<<< HEAD
 				"galleryMaxRows": 3,
 				"gallerySorting": "random",
+=======
+			  "galleryMaxRows": 3,
+>>>>>>> 0028876a0fb35fd0804112326cfdbf92b6efd92a
 			  "thumbnailAlignment": "center"
 		});
 	}
 	
 	$( document ).ready(function(){
+<<<<<<< HEAD
 		document.getElementById("anchor_AKTUELLES").click(); // first tab select
 	});
+=======
+		document.getElementById("anchor_DAMEN").click();
+	});
+
+  </script>
+  <div class="container">
+>>>>>>> 0028876a0fb35fd0804112326cfdbf92b6efd92a
 
   </script>
   <div class="container">
@@ -66,7 +82,11 @@ shop: shops.shop_info.shop_info
     <div class="col s12">
 				<div class="tabs" style="background-color: black;">
         {% for impression in site.data.shops.shop_info.impressionen_shop %}
+<<<<<<< HEAD
           <li class="tab col s3"><a id="anchor_{{impression.collections}}" href="#galleryContainer" onclick="init_gallery('{{impression.albumID}}')" class="white-text" style="border-bottom-color: black;">{{impression.collections}}</a></li>
+=======
+          <li class="tab col s3"><a id="anchor_{{impression.collections}}" href="#galleryContainer" onclick="init_gallery('{{impression.albumID}}')" class="black-text" style="border-bottom-color: black;">{{impression.collections}}</a></li>
+>>>>>>> 0028876a0fb35fd0804112326cfdbf92b6efd92a
         {% endfor %}
       </div>    
     </div>
