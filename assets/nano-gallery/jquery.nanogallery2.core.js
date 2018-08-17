@@ -1305,7 +1305,7 @@
     },
 
     thumbnailToolbarImage :       { topLeft: 'select', topRight : 'featured' },
-    thumbnailToolbarAlbum :       { topLeft: 'cart', topRight : 'counter'  },
+    thumbnailToolbarAlbum :       { topLeft: 'select', topRight : 'counter'  },
     thumbnailDisplayInterval :    15,
     thumbnailL1DisplayInterval :  null,
     thumbnailDisplayTransition :  'fadeIn',
