@@ -1304,7 +1304,7 @@
       title :                     ''
     },
 
-    thumbnailToolbarImage :       { topLeft: 'select', topRight : 'featured' },
+    thumbnailToolbarImage :       { topLeft: 'cart', topRight : 'featured' },
     thumbnailToolbarAlbum :       { topLeft: 'select', topRight : 'counter'  },
     thumbnailDisplayInterval :    15,
     thumbnailL1DisplayInterval :  null,
