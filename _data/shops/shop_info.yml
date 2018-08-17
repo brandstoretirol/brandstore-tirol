@@ -2,41 +2,47 @@
 shop_info:
 - title: UNSER SHOP
   url: shop
-  info: Öffnungszeiten&#058;
+  info: >
+        <span style="font-size: 20px">Eure Öffnungszeiten</span>
+        <br>
         <br>
         Mo - Fr von 10.00 - 19.00 Uhr,
         <br>
         Sa von 08.00 - 12.00 Uhr,
         <br>
-        oder komm zu deinem ganz persönlichen
         <br>
+        oder komm zu deinem ganz persönlichen
         Shopping-Erlebnis! 
         <br>
-        Nähere Infos findest du unter <u><a class="grey-text" href="https://brandstoretirol.github.io/brandstore-tirol/your_shop">BESONDERES</a></u>
+        Nähere Infos findest du unter <u><a class="grey-text" href="https://brandstore.tirol/your_shop">DEIN SHOP</a></u>
         <br>
         <br>
-        Du findest uns in der
+        Du findest uns in der Wildbichler Strasse 2D, in 6341 Ebbs/Tirol
         <br>
-        Wildbichler Strasse 2D, 6341 Ebbs/Tirol
+        Mobil&#058; <span class="grey-text"><u>0043 660 6622 142</u> (ab 1.10.2018) </span>
         <br>
-        Mobil&#058; 0043 699 18333891
+        Kontakt und Bestellungen&#058; <u><a class="grey-text" href="mailto:hallo@brandstore.tirol">hallo@brandstore.tirol</a></u>
         <br>
-        Mail&#058; <u><a class="grey-text" href="mailto:info@brandstore.tirol">info@brandstore.tirol</a></u>
-        <br>
-  info2: ''
+  info2: test
   hashtag: 
   greetings: Euer Tom!
 
 # IMPRESSIONEN
 impressionen_shop: 
-  - collections: DAMEN
-    id: damen
-    albumID: "6560260242893629377"
+  - collections: AKTUELLES
+    id: aktuelles
+    albumID: "6569144106452093697"
+ #   albumID: "6568094183311223217"
 
-  - collections: HERREN
-    id: herren
-    albumID: "6560260344570582193"
 
-  - collections: KINDER
-    id: kinder
-    albumID: "6560260408849047905"
+ # - collections: DAMEN
+ #   id: damen
+ #   albumID: "6560260242893629377"
+
+ # - collections: HERREN
+ #   id: herren
+ #   albumID: "6560260344570582193"
+
+ # - collections: KINDER
+ #   id: kinder
+ #   albumID: "6560260408849047905"

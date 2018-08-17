@@ -1,0 +1,39 @@
+# PARTNERSHIP
+partnership:
+- title: BRANDSTORE.TIROL "STORES OF SPORTS"
+  info: >
+        Du bist egoistisch, falsch, gierig, leidenschaftslos und unmotiviert bei dem, was du tust? Glaubst, du kannst alles
+        besser und bist der große Zampanova und aufs schnelle Geld aus? Dann bist du hier definitiv falsch!
+        <br>
+        Wenn du Lust hast, GEMEINSAM etwas zu erreichen, du Spaß und Leidenschaft für dein Business hast, stets
+        motiviert bist und Handschlagqualität besitzt, dann bist du richtig bei uns. Wir suchen ständig zuverlässige Partner
+        aus dem Sportbereich, da wir weder alles können, noch glauben, alles ALLEINE machen zu müssen. Wenn dich
+        das ständige Gegeneinander auch schon lange nervt, dann meld dich bei uns! Wir haben uns bereits unterschiedlichste
+        Konzepte überlegt und mittlerweile, gemeinsam mit unseren Botschaftern und unserem Socialmedia Experten Peter, 
+        eine Community aus den verschiedensten Sparten von über 100.000 Personen aufgebaut.
+        <br>
+        <br>
+        <u>Dein Ansprechpartner</u>
+        <br>
+        Tom
+        <br>
+        Mobil&#058; <span class="grey-text"><u>0043 699 183 33 891</u></span>
+        <br>
+        Mail&#058; <u><a class="grey-text" href="mailto:tom@brandstore.tirol">tom@brandstore.tirol</a></u>
+  info2: 
+  url: partnership
+  hashtag: "<b>&#35;designyoursports</b>"
+  links: 
+        <u><a class="grey-text" href="https://brandstore.tirol/your_shop">DEIN SHOP</a></u>
+        <u><a class="grey-text" href="https://brandstore.tirol/ambassador">BOTSCHAFTER</a></u>
+        <u><a class="grey-text" href="https://brandstore.tirol/individual_companydesign">FIRMENDESIGN</a></u>
+        <u><a class="grey-text" href="https://brandstore.tirol/susi_kimmel">SUSI KIMMEL</a></u>
+        <u><a class="grey-text" href="https://brandstore.tirol/black_limited">BLACK LIMITED</a></u>
+  greetings:
+
+# IMPRESSIONEN
+impressionen_partnership:
+  - collections: "&#35;designyoursports"
+    id: aktuelles
+    #albumID: "6565168299633493377"
+    albumID: "6569144106452093697"

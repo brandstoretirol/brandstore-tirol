@@ -2,21 +2,32 @@ footer:
   - title: Impressum
     content:
       - title: Impressum
-        url: /brandstore-tirol/impressum
+        url: /impressum
         target: ''
         type: internal
       - title: Cookie-Richtlinie
-        url: /brandstore-tirol/cookie
+        url: /cookie
         target: ''
         type: internal
     
   - title: Kontakt
     content:
       - title: Persönlich
-        url: /brandstore-tirol/shop
+        url: /shop
         target: ''
         type: internal
-      - title: Unpersönlich
+
+      - title: Facebook
         url: https://www.facebook.com/tom.brandstore.tirol
+        target: _blank
+        type: external
+        
+      - title: Facebook App
+        url: fb://profile/100024959831617
+        target: _blank
+        type: external
+        
+      - title: Instagram
+        url: https://www.instagram.com/brandstore.tirol
         target: _blank
         type: external

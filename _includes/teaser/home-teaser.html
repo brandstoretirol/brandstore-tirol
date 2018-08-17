@@ -19,18 +19,21 @@
 <div class="row starter_text" style="background-color: #000; color: #fff; padding: 10px 0; text-align: justify">
 
   <div class="container">
-    <div class="col s12">
-      <div class="col s6" style="padding-left: 0">
+    <div class="col s12 "style="padding-right: 0px;">
+      <div class="col s10" style="padding-left: 0">
         {% for banner in site.data.default.banner.banner %}
         <h6>{{ banner.title }}</h6>
         {% endfor %}
       </div>
-     <div class="col s6">
+     <div class="col s2">
       <i class="material-icons right less" style="margin-top: 15px; cursor: pointer;" onclick="hide_starter_text()">expand_less</i>
       <i class="material-icons right more" style="margin-top: 15px; cursor: pointer; display: none;" onclick="show_starter_text()">expand_more</i>
      </div>
     </div>
     <div class="show_hide_text">
+      <div class="col s12">
+          <hr style="padding-left: 0; margin-left: 0; padding-right: 0; margin-right: 0;">
+      </div>
       <div class="col s12 m6">
         {% for banner in site.data.default.banner.banner %}
         <p>{{ banner.text }}</p>
@@ -44,6 +47,12 @@
       <div class="col s12">
         {% for banner in site.data.default.banner.banner %}
         <p style="font-size: 15px; text-align: center;">{{ banner.hashtag }}</p>
+        <!--<div>
+          <video width="100%" controls>
+            <source src="/assets/videos/BS_image_video.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        </div>-->
         {% endfor %}
       </div>
       <div class="col s12">
