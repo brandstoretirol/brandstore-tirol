@@ -1,28 +1,28 @@
 ---
 layout: default
 ---
-			  <div style="margin-left: 10px;margin-right: 10px;" class="page post">
+			  <div class="page post">
 				{%if page.active %}
 					<article>
 						<header>
-							<h6 class="heading"><a href="{{ page.url | prepend: site.baseurl }}" style="color:black;">{{ page.info }}</a></h6>
-							<hr style="margin-left: 0px;margin-right: 0px;">
-							<p class="post-meta">{% include date.html date=page.date %} {% if page.dateto %} - {% endif %} {% include date.html date=page.dateto %}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-							<hr style="margin-left: 0px;margin-right: 0px;">
+							<h6 style="margin-left: 10px" class="heading"><a href="{{ page.url | prepend: site.baseurl }}" style="color:black;">{{ page.info }}</a></h6>
+							<hr style="margin-left: 10px;margin-right: 10px;">
+							<p style="margin-left: 10px" class="post-meta">{% include date.html date=page.date %}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+							<hr style="margin-left: 10px;margin-right: 10px;">
 						</header>
 
 						{{ content }}
 					
 					{% if page.albumID %}
-					<hr style="margin-left: 0px;margin-right: 0px;">
-					<h6>IMPRESSIONEN</h6>
-					<hr style="margin-left: 0px;margin-right: 0px;">
+					<hr style="margin-left: 10px;margin-right: 10px;">
+					<h6 style="margin-left: 10px;">IMPRESSIONEN</h6>
+					<hr style="margin-left: 10px;margin-right: 10px;">
 					<br/>
-					<div class="col s12 gallery-wrapper" id="aktuell">
+					<div class="col s12 gallery-wrapper" id="aktuell" style="margin-left: 10px">
 						<div data-nanogallery2='{
 						"userID": "102674011871822108337",
 						"kind": "google2",
-						"google2URL": "https://brandstore.at/nanogp/nanogp.php",
+						"google2URL": "https://brandstore.tirol/nanogp/nanogp.php",
 						"album": "{{page.albumID}}",
 						"thumbnailWidth": "auto",
 							"thumbnailBorderVertical": 1,
@@ -37,7 +37,6 @@ layout: default
 							},
 							"galleryDisplayMode": "pagination",
 							"galleryMaxRows": 3,
-							"gallerySorting": "random",
 							"thumbnailAlignment": "center"
 						}'>
 						</div>

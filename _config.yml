@@ -16,16 +16,10 @@
 title: BRANDSTORE.TIROL
 email: socialmedia@brandstore.tirol
 description: >- # this means to ignore newlines until "baseurl:"
-          Bevor es losgeht, möchten wir euch mitteilen, warum wir dieses Projekt ins Leben gerufen haben, was unsere Motivation und Vision dahinter ist und welches Ziel wir uns gesetzt haben.
-          Aus Liebe zur Natur und zum Sport <b>(&#35;love)</b> entwickelte sich die Leidenschaft (&#35;passion)zur Marke und den Produkten, die Begeisterung (&#35;enthusiasm) für das Team und die Vision dahinter, 
-          der Traum (&#35;dream), ein Teil davon zu werden und letztendlich das Projekt (&#35;project), all das in die Realität umzusetzen.
-          Daraus entstand der Wunsch, unseren Kunden die Möglichkeit zu bieten, Teil dieser Geschichte zu werden, sie mitzuschreiben und zu erleben.
-          Wir möchten uns beim Team der Martini Sportswear GmbH (&#35;martinisportswear &#35;designyoursports) für diese wunderbare Inspiration und die Möglichkeit, uns verwirklichen zu können, aus tiefstem Herzen bedanken und freuen uns
-          auf eine langjährige und intensive Zusammenarbeit.
-          Wir leben und teilen die Tradition und Philosophie unserer Brands und werden alles versuchen, in der heutigen Zeit von Rücksichtslosigkeit, Respektlosigkeit, Schnelllebigkeit und Ignoranz, 
-          Shopping wieder zu einem Wohlfühlerlebnis zu machen (&#35;aufaguadezeit)
-          BRANDSTORE.TIROL (&#35;brandstoretirol)... eine Geschichte wird Programm (&#35;lebdeilebn)
-baseurl: "" # the subpath of your site, e.g. /blog
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "/brandstore-tirol" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 port: 4001
 

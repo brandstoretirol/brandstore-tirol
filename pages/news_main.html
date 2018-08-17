@@ -11,14 +11,14 @@ permalink: /news_main
 		{% for item in site.news %}	
 			{%if item.active %}	
 			<a href="{{ item.url | prepend: site.baseurl }}"> 
-			<div class="col s12 m6">
+			<div class="col s12 m4">
 				<div class="card">
 				<div class="card-image waves-effect waves-block waves-light">
 					<img class="activator" src="{{ item.img-url | prepend: site.baseurl }}">
 				</div>
 				<div class="card-content">
 					<span class="card-title" style="color:black">{{ item.title }}</span>
-					<span class="card-title" style="color:black; font-size: 14px;"><b>{% include date.html date=item.date %}{% if item.dateto %} - {% endif %} {% include date.html date=item.dateto %}</b></span>
+					<span class="card-title" style="color:black; font-size: 14px;"><b>{% include date.html date=item.date %}</b></span>
 				</div>
 				</div>
 			</div>

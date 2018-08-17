@@ -5,47 +5,24 @@ individual_companydesign:
         Dann sag uns einfach Bescheid! Gemeinsam mit unseren Partnern können wir dir fast jeden Wunsch erfüllen - vom 
         Stick bis zum Siebdruck in gewohnter Qualität.
         <br>
-        Die Technologien von 
-        <u><a class="grey-text" href="https://www.martini-sportswear.com/de/martini/technologien/primaloft" target="_blank">PrimaLoft® Gold</a></u>, 
-        <u><a class="grey-text" href="https://www.martini-sportswear.com/de/martini/technologien/pertex-shield" target="_blank">Pertex® Shield</a></u>,
-        <u><a class="grey-text" href="https://www.martini-sportswear.com/de/martini/technologien/polartec-thermal-pro" target="_blank">Polartec® Thermal Pro®</a></u>,
-        <u><a class="grey-text" href="https://www.martini-sportswear.com/de/martini/technologien/polartec-alpha" target="_blank">Polartec® Alpha®</a></u>,
-        <u><a class="grey-text" href="https://www.martini-sportswear.com/de/martini/technologien/polartec-windpro" target="_blank">Polartec® Wind Pro®</a></u> und
-        <u><a class="grey-text" href="https://www.martini-sportswear.com/de/martini/technologien/polartec-stretch" target="_blank">Polartec® Power Stretch®</a></u>
-        überzeugen mit 
-        Flexibilität, Zuverlässigkeit und Beständigkeit. Produkte von Martini Sportswear punkten somit nicht nur mit dem 
-        modernen Martini-Style, sondern sind auch langlebig, pflegeleicht, flexibel und multifunktionell einsetzbar, 
-        wetterfest, atmungsaktiv und unterstützen dich bei all deinen sportlichen Aktivitäten. Deshalb eigenen sich 
-        unsere Kollektionen perfekt für sämtliche Outdoorsportarten bei jedem Wetter.
-        <br>
-        Aber bitte Folgendes beachten! Größere Stückmengen müssen wir aufgrund der Produktionsvorgaben rechtzeitig planen. 
+        Die Technologien von PrimaLoft® Gold, Pertex® Shield, Polartec® Thermal Pro®, Polartec® Alpha®, Polartec® 
+        Wind Pro® und Polartec® Power Stretch® überzeugen mit Flexibilität, Zuverlässigkeit und Beständigkeit. 
+        Produkte von Martini Sportswear punkten somit nicht nur mit dem modernen Martini-Style, sondern sind auch 
+        langlebig, pflegeleicht, flexibel und multifunktionell einsetzbar, wetterfest, atmungsaktiv und unterstützen 
+        dich bei all deinen sportlichen Aktivitäten. Deshalb eigenen sich unsere Kollektionen perfekt für sämtliche 
+        Outdoorsportarten bei jedem Wetter.
+  info2: Aber bitte Folgendes beachten! Größere Stückmengen müssen wir aufgrund der Produktionsvorgaben rechtzeitig planen. 
         Wenn du z.B. für deine Mitarbeiter an ein cooles Weihnachtsgeschenk denkst, müssen wir uns bereits im Februar, 
         für einen Frühjahrs- bzw. Sommerevent bereits im August des Vorjahres über die Stückzahlen und den Druck unterhalten. 
         Rechne bitte mit einer groben Vorlaufzeit von <b>8 Monaten</b>. Spontane Aktionen versuchen wir natürlich auch 
         zu erfüllen, aber hier können wir dir nicht versprechen, dass die gewünschten Größen, Farben und Modelle in großer 
         Anzahl verfügbar sind.
-        <br>
-        <br>
-        <u>Dein Ansprechpartner</u>
-        <br>
-        Tom
-        <br>
-        Mobil&#058; <span class="grey-text"><u>0043 699 183 33 891</u></span>
-        <br>
-        Mail&#058; <u><a class="grey-text" href="mailto:tom@brandstore.tirol">tom@brandstore.tirol</a></u>
-  info2: 
   url: individual_companydesign
   hashtag: "<b>&#35;martinibusiness</b>"
-  links: 
-        <u><a class="grey-text" href="https://brandstore.tirol/your_shop">DEIN SHOP</a></u>
-        <u><a class="grey-text" href="https://brandstore.tirol/ambassador">BOTSCHAFTER</a></u>
-        <u><a class="grey-text" href="https://brandstore.tirol/partnership">PARTNERSCHAFT</a></u>
-        <u><a class="grey-text" href="https://brandstore.tirol/susi_kimmel">SUSI KIMMEL</a></u>
-        <u><a class="grey-text" href="https://brandstore.tirol/black_limited">BLACK LIMITED</a></u>
   greetings:
 
 # INDIVIDUAL COMPANYDESIGN
 impressionen_individual_companydesgin:
-  - collections: "&#35;individuell"
+  - collections: "&#35;martinibusiness"
     id: aktuelles
     albumID: "6559047085115023249"

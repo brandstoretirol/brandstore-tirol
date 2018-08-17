@@ -1,58 +1,35 @@
 banner:
   - title: Liebe Freunde!
-    text: >
-            Bevor es losgeht, möchten wir euch mitteilen, warum wir dieses Projekt ins Leben gerufen haben, was unsere Motivation und Vision dahinter ist und welches Ziel wir uns gesetzt haben.
-            <br>
-            <br>
-            Aus Liebe zur Natur und zum Sport <b>(&#35;love)</b> entwickelte sich die Leidenschaft <b>(&#35;passion)</b> zur Marke und den Produkten, die Begeisterung <b>(&#35;enthusiasm)</b> für das Team und die Vision dahinter, 
-            der Traum <b>(&#35;dream)</b>, ein Teil davon zu werden und letztendlich das Projekt <b>(&#35;project)</b>, all das in die Realität umzusetzen.
-            <br>
-            <br>
-            Daraus entstand der Wunsch, unseren Kunden die Möglichkeit zu bieten, Teil dieser Geschichte zu werden, sie mitzuschreiben und zu erleben.   
-    text2: >
-            Wir möchten uns beim Team der Martini Sportswear GmbH <b>(&#35;martinisportswear &#35;designyoursports)</b> für diese wunderbare Inspiration und die Möglichkeit, uns verwirklichen zu können, aus tiefstem Herzen bedanken und freuen uns
-            auf eine langjährige und intensive Zusammenarbeit.
-            <br>
-            <br>
-            Wir leben und teilen die Tradition und Philosophie unserer Brands und werden alles versuchen, in der heutigen Zeit von Rücksichtslosigkeit, Respektlosigkeit, Schnelllebigkeit und Ignoranz, 
-            Shopping wieder zu einem Wohlfühlerlebnis zu machen <b>(&#35;aufaguadezeit)</b>
-            <br>
-            <br>
-            BRANDSTORE.TIROL <b>(&#35;brandstoretirol)</b>... eine Geschichte wird Programm <b>(&#35;lebdeilebn)</b>
-            <br>
-    text3: >    
-            <span style="font-size: 20px">DIE GROSSE ERÖFFNUNG</span>
-            <br>
-            <span style="font-size: 20px">AM 13.10.2018</span>
-            <br>
-            Nähere Infos findest du im <u><a class="white-text" href="https://brandstore.tirol/news/2018-06-01-Eroeffnungsfeier.html">PROGRAMM</a></u>
-            <br>
+    text: Bevor es losgeht, möchten wir euch mitteilen, warum wir dieses Projekt ins Leben gerufen haben, was unsere Motivation und Vision dahinter ist und welches Ziel wir uns gesetzt haben.
+          <br>
+          <br>
+          Aus Liebe zur Natur und zum Sport <b>(&#35;love)</b> entwickelte sich die Leidenschaft <b>(&#35;passion)</b> zur Marke und den Produkten, die Begeisterung <b>(&#35;enthusiasm)</b> für das Team und die Vision dahinter, 
+          der Traum <b>(&#35;dream)</b>, ein Teil davon zu werden und letztendlich das Projekt <b>(&#35;project)</b>, all das in die Realität umzusetzen.
+          <br>
+          <br>
+          Daraus entstand der Wunsch, unseren Kunden die Möglichkeit zu bieten, Teil dieser Geschichte zu werden, sie mitzuschreiben und zu erleben.
+          
+    text2: 
+          Wir möchten uns beim Team der Martini Sportswear GmbH <b>(&#35;martinisportswear &#35;designyoursports)</b> für diese wunderbare Inspiration und die Möglichkeit, uns verwirklichen zu können, aus tiefstem Herzen bedanken und freuen uns
+          auf eine langjährige und intensive Zusammenarbeit.
+          <br>
+          <br>
+          Wir leben und teilen die Tradition und Philosophie unserer Brands und werden alles versuchen, in der heutigen Zeit von Rücksichtslosigkeit, Respektlosigkeit, Schnelllebigkeit und Ignoranz, 
+          Shopping wieder zu einem Wohlfühlerlebnis zu machen <b>(&#35;aufaguadezeit)</b>
+          <br>
+          <br>
+          BRANDSTORE.TIROL <b>(&#35;brandstoretirol)</b>... eine Geschichte wird Programm <b>(&#35;lebdeilebn)</b>
+          <br>
+
+    text3: Ankündigung
+
     img-url: banner_opening.png
-    #img-url: banner_winter18.png
+
     hashtag: "<b>&#35;love &#35;passion &#35;enthusiasm &#35;dream &#35;project &#35;martinisportswear &#35;designyoursports &#35;aufaguadezeit &#35;brandstoretirol &#35;lebdeilebn</b>"
+    
     greetings: Euer Tom!
+    
+  # - title: Lol
+  #   text: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  #   img-url: http://via.placeholder.com/1920x108
 
-#slide show images
-  #- title: 
-    #text:
-    #text2:
-    #text3:
-    #img-url: banner_winter18.png
-    #hashtag:
-    #greetings:
-
-# - title: 
-    #text:
-    #text2:
-    #text3:
-    #img-url: banner_sommer19.png
-    #hashtag:
-    #greetings:
-
-# - title: 
-    #text:
-    #text2:
-    #text3:
-    #img-url: /slides/banner_tom.png
-    #hashtag:
-    #greetings:

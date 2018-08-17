@@ -26,7 +26,7 @@ your_shop: specials.your_shop.your_shop
 		$("#nanogalleryGeneric").nanogallery2({
 			"userID": "102674011871822108337",
 			"kind": "google2",
-			"google2URL": "https://brandstore.at/nanogp/nanogp.php",
+			"google2URL": "https://brandstore.tirol/nanogp/nanogp.php",
 			"album": albumID,
 			"thumbnailWidth": "auto",
 			  "thumbnailBorderVertical": 1,
@@ -40,8 +40,7 @@ your_shop: specials.your_shop.your_shop
 				"display": false
 			  },
 			  "galleryDisplayMode": "pagination",
-				"galleryMaxRows": 3,
-				"gallerySorting": "random",
+			  "galleryMaxRows": 3,
 			  "thumbnailAlignment": "center"
 		});
 	}
@@ -64,9 +63,9 @@ your_shop: specials.your_shop.your_shop
 
 <div class="row">
   <div class="col s12">
-			<div class="tabs" style="background-color: black;">
+    <div class="tabs">
       {% for impression in site.data.specials.your_shop.impressionen_your_shop %}
-      <li class="tab col s3"><a id="anchor_{{impression.id}}" href="#galleryContainer" onclick="init_gallery('{{impression.albumID}}')" class="white-text" style="border-bottom-color: black;">{{impression.collections}}</a></li>
+      <li class="tab col s3"><a id="anchor_{{impression.id}}" href="#galleryContainer" onclick="init_gallery('{{impression.albumID}}')" class="black-text" style="border-bottom-color: black;">{{impression.collections}}</a></li>
       {% endfor %}
     </div>    
   </div>

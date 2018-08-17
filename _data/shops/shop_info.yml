@@ -14,35 +14,29 @@ shop_info:
         oder komm zu deinem ganz persönlichen
         Shopping-Erlebnis! 
         <br>
-        Nähere Infos findest du unter <u><a class="grey-text" href="https://brandstore.tirol/your_shop">DEIN SHOP</a></u>
+        Nähere Infos findest du unter <u><a class="grey-text" href="https://brandstoretirol.github.io/brandstore-tirol/your_shop">BESONDERES</a></u>
         <br>
         <br>
         Du findest uns in der Wildbichler Strasse 2D, in 6341 Ebbs/Tirol
         <br>
-        Mobil&#058; <span class="grey-text"><u>0043 660 6622 142</u> (ab 1.10.2018) </span>
+        Mobil&#058; <span class="grey-text"><u>0043 699 18333891</u></span>
         <br>
-        Kontakt und Bestellungen&#058; <u><a class="grey-text" href="mailto:hallo@brandstore.tirol">hallo@brandstore.tirol</a></u>
+        Mail&#058; <u><a class="grey-text" href="mailto:hallo@brandstore.tirol">hallo@brandstore.tirol</a></u>
         <br>
-  info2: test
+  info2: ''
   hashtag: 
   greetings: Euer Tom!
 
 # IMPRESSIONEN
 impressionen_shop: 
-  - collections: AKTUELLES
-    id: aktuelles
-    albumID: "6569144106452093697"
- #   albumID: "6568094183311223217"
+  - collections: DAMEN
+    id: damen
+    albumID: "6560260242893629377"
 
+  - collections: HERREN
+    id: herren
+    albumID: "6560260344570582193"
 
- # - collections: DAMEN
- #   id: damen
- #   albumID: "6560260242893629377"
-
- # - collections: HERREN
- #   id: herren
- #   albumID: "6560260344570582193"
-
- # - collections: KINDER
- #   id: kinder
- #   albumID: "6560260408849047905"
+  - collections: KINDER
+    id: kinder
+    albumID: "6560260408849047905"

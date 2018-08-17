@@ -6,10 +6,6 @@
   img-url: assets/img/logos/bs_logo_black_hoch_neu.png
   url: ambassador
 
-- title: PARTNERSCHAFT
-  img-url: assets/img/logos/bs_logo_black_hoch_neu.png
-  url: partnership
-
 - title: FIRMENDESIGN
   img-url: assets/img/logos/bs_logo_black_hoch_neu.png
   url: individual_companydesign
@@ -17,7 +13,3 @@
 - title: SUSI KIMMEL
   img-url: assets/img/logos/bs_logo_black_hoch_neu.png
   url: susi_kimmel
-
-- title: BLACK LIMITED
-  img-url: assets/img/logos/black_limited_logo.png
-  url: black_limited

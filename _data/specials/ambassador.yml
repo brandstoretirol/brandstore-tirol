@@ -1,31 +1,20 @@
 # AMBASSADOR
 ambassador:
 - title: WERDE BOTSCHAFTER
-  info: >
-        Du teilst unsere Liebe zur Natur und zum Sport, die Leidenschaft zur Marke und die Begeisterung für das Team 
-        und die Vision dahinter? Du bist stark in den sozialen Medien vertreten, pflegst eine große Community oder vollbringst sportliche
-        Höchstleistungen? Du suchst einen Sponsor für dein Projekt, oder willst einfach nur deine Geschichte und Leidenschaft mit
-        uns teilen? Dann werde unser Botschafter! Als Botschafter erhältst du, neben den zahlreichen anderen Vorteilen, pro Saison 
-        ein komplettes Outfit zu absoluten Sonderkonditionen. Meld dich bei uns, erzähl uns deine Geschichte und zeig uns deine Begeisterung und Leidenschaft, für das was du tust!
-        Stell uns deine Community, Vision oder dein Projekt vor. Die Details besprechen wir dann gemeinsam.
+  info: Du teilst unsere Liebe zur Natur und zum Sport, die Leidenschaft zur Marke und die Begeisterung für das Team 
+        und die Vision dahinter? Du bist stark in den sozialen Medien vertreten und pflegst eine große Community? 
+        Dann werde unser Botschafter! Als Botschafter erhältst du, neben den zahlreichen anderen Vorteilen, pro Saison 
+        ein komplettes Outfit zu absoluten Sonderkonditionen. Meld dich bei uns und zeig uns deine Begeisterung. 
+        Stell uns deine Community und Vision vor. Die Details besprechen wir dann gemeinsam.
+  info2: Ansprechpartner &#058;
         <br>
+        Tom Moser
         <br>
-        <u>Dein Ansprechpartner</u>
-        <br>
-        Tom
-        <br>
-        Mobil&#058; <span class="grey-text"><u>0043 699 183 33 891</u></span>
+        Mobil&#058; 0043 699 18333891
         <br>
         Mail&#058; <u><a class="grey-text" href="mailto:tom@brandstore.tirol">tom@brandstore.tirol</a></u>
-  info2: 
   url: ambassador
-  hashtag: "<b>&#35;dream &#35;project &#35;designyoursports &#35;aufaguadezeit &#35;lebdeilebn</b>"
-  links: 
-        <u><a class="grey-text" href="https://brandstore.tirol/your_shop">DEIN SHOP</a></u>
-        <u><a class="grey-text" href="https://brandstore.tirol/partnership">PARTNERSCHAFT</a></u>
-        <u><a class="grey-text" href="https://brandstore.tirol/individual_companydesign">FIRMENDESIGN</a></u>
-        <u><a class="grey-text" href="https://brandstore.tirol/susi_kimmel">SUSI KIMMEL</a></u>
-        <u><a class="grey-text" href="https://brandstore.tirol/black_limited">BLACK LIMITED</a></u>
+  hashtag: "<b>&#35;designyoursports</b>"
   greetings:
 
 # IMPRESSIONEN
@@ -33,4 +22,3 @@ impressionen_ambassador:
   - collections: "&#35;designyoursports"
     id: aktuelles
     albumID: "6565168299633493377"
-    #albumID: "6569144106452093697"

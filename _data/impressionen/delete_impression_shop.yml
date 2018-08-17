@@ -1,0 +1,12 @@
+impression_shop: 
+  - collections: DAMEN
+    id: damen
+    albumID: "6560260242893629377"
+
+  - collections: HERREN
+    id: herren
+    albumID: "6560260344570582193"
+
+  - collections: KINDER
+    id: kinder
+    albumID: "6560260408849047905"
