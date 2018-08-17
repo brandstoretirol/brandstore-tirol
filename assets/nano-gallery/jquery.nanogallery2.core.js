@@ -1304,8 +1304,8 @@
       title :                     ''
     },
 
-    thumbnailToolbarImage :       { topLeft: 'cart', topRight : 'featured' },
-    thumbnailToolbarAlbum :       { topLeft: 'select', topRight : 'counter'  },
+    thumbnailToolbarImage :       { topLeft: 'select', topRight : 'featured' },
+    thumbnailToolbarAlbum :       { topLeft: 'cart', topRight : 'counter'  },
     thumbnailDisplayInterval :    15,
     thumbnailL1DisplayInterval :  null,
     thumbnailDisplayTransition :  'fadeIn',
