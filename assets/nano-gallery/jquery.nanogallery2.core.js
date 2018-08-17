@@ -1323,7 +1323,7 @@
     imageTransition :             'swipe',
     viewerTransitionMediaKind :   'img',
     viewerZoom :                  true,
-    viewerImageDisplay :          '',
+    viewerImageDisplay :          'bestImageQuality',
     openOnStart :                 '',
     viewerHideToolsDelay :        3000,
     viewerToolbar : {
@@ -1331,9 +1331,11 @@
       position :                  'bottomOverImage',
       fullWidth :                 true,
       align :                     'center',
-      autoMinimize :              0,
-      standard :                  'minimizeButton,label',
-      minimized :                 'minimizeButton,label,infoButton,shareButton,downloadButton,linkOriginalButton,fullscreenButton'
+      autoMinimize :              true,
+      //standard :                  'minimizeButton,label',
+      standard :                  'infoButton,shareButton,linkOriginalButton,fullscreenButton',
+      //minimized :                 'minimizeButton,label,infoButton,shareButton,downloadButton,linkOriginalButton,fullscreenButton'
+      minimized :                 'infoButton,shareButton,linkOriginalButton,fullscreenButton'
     },
     viewerTools : {
       topLeft :                   'pageCounter,playPauseButton',
@@ -2438,7 +2440,7 @@
       navigationFilter :      { color: '#ddd', background: '#111', colorSelected: '#fff', backgroundSelected: '#111', borderRadius: '4px' },
       thumbnail :             { background: '#444', backgroundImage: 'linear-gradient(315deg, #111 0%, #667 90%)', borderColor: '#000', labelOpacity : 1, labelBackground: 'rgba(34, 34, 34, 0)', titleColor: '#fff', titleBgColor: 'transparent', titleShadow: '', descriptionColor: '#ccc', descriptionBgColor: 'transparent', descriptionShadow: '', stackBackground: '#aaa' },
       thumbnailIcon :         { padding: '5px', color: '#fff' },
-      pagination :            { background: '#181818', backgroundSelected: '#666', color: '#fff', borderRadius: '2px', shapeBorder: '3px solid #666', shapeColor: '#444', shapeSelectedColor: '#aaa'}
+      pagination :            { background: '#181818', backgroundSelected: '#666', color: '#fff', borderRadius: '2px', shapeBorder: '3px solid #fff', shapeColor: '#444', shapeSelectedColor: '#aaa'}
     };
 
     G.galleryTheme_light = {
@@ -2447,7 +2449,7 @@
       navigationFilter :      { background: '#eee', color: '#222', colorSelected: '#000', backgroundSelected: '#eee', borderRadius: '4px' },
       thumbnail :             { background: '#444', backgroundImage: 'linear-gradient(315deg, #111 0%, #667 90%)', borderColor: '#000', labelOpacity : 1, labelBackground: 'rgba(34, 34, 34, 0)', titleColor: '#fff', titleBgColor: 'transparent', titleShadow: '', descriptionColor: '#ccc', descriptionBgColor: 'transparent', descriptionShadow: '', stackBackground: '#888' },
       thumbnailIcon :         { padding: '5px', color: '#fff' },
-      pagination :            { background: '#eee', backgroundSelected: '#aaa', color: '#000', borderRadius: '2px', shapeBorder: '3px solid #666', shapeColor: '#444', shapeSelectedColor: '#aaa'}
+      pagination :            { background: '#eee', backgroundSelected: '#aaa', color: '#000', borderRadius: '2px', shapeBorder: '3px solid #fff', shapeColor: '#444', shapeSelectedColor: '#aaa'}
     };
 
     // Color schemes - lightbox
@@ -2984,7 +2986,7 @@
           paginationNextPage();
         });
       }
-
+      
       G.$E.conTnBottom.css('opacity', 1);
 
     }
@@ -8318,8 +8320,12 @@
     // Display photo infos
     function ItemDisplayInfo( item) {
 
-      var content = '<div class="nGY2PopupOneItemText">' + item.title + '</div>';
-      content    += '<div class="nGY2PopupOneItemText">' + item.description + '</div>';
+      var content = '<div class="nGY2PopupOneItemText">' + item.description + '</div>';
+      
+      //wird nicht benötig 180810 TM - title über bms
+      //var content = '<div class="nGY2PopupOneItemText">' + item.title + '</div>';
+      //content    += '<div class="nGY2PopupOneItemText">' + item.description + '</div>';
+      
       //wird nicht benötig 180527 TM
       //if( item.author != '' ) {
       //  content  += '<div class="nGY2PopupOneItemText">' + G.O.icons.user + ' ' + item.author + '</div>';
@@ -8402,6 +8408,7 @@
           break;
         case 'label':
           r += '"><div class="title nGEvent" itemprop="name"></div><div class="description nGEvent" itemprop="description"></div></div>';
+          //r += '"><div class="title nGEvent" itemprop="name"></div></div>';
           break;
         default:
           // custom button

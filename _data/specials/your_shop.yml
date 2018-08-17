@@ -4,17 +4,33 @@ your_shop:
   info: Mach Shopping zu deinem ganz persönlichen Erlebnis! Wenn du Lust hast, alleine oder mit Freunden,
         jenseits des täglichen Trubels, dein ganz persönliches Einkaufserlebnis zu gestalten, sag uns einfach 
         Bescheid und wir vereinbaren von Mo-Fr in der Zeit von 20-22 Uhr oder am Samstag von 17-20 Uhr
-        einen gemeinsamen Termin. 
-  info2: Für einen kleinen Unkostenbeitrag von EUR 25,- pro Person, werden du und 
+        einen gemeinsamen Termin. Für einen kleinen Unkostenbeitrag von EUR 25,- pro Person, werden du und 
         deine Begleiter mit Getränken und Knabbereien versorgt. 
         <br>
         Die persönliche und kompetente Beratung versteht sich ja von selbst!
+        <br>
+        <br>
+        <u>Deine Ansprechpartner</u>
+        <br>
+        Tom & Peter
+        <br>
+        Mobil&#058; <span class="grey-text"><u>0043 660 6622 142</u></span>
+        <br>
+        Mail&#058; <u><a class="grey-text" href="mailto:hallo@brandstore.tirol">hallo@brandstore.tirol</a></u>
+  info2: 
   url: your_shop
   hashtag: "<b>&#35;aufaguadezeit</b>"
+  links: 
+        <u><a class="grey-text" href="https://brandstore.tirol/ambassador">BOTSCHAFTER</a></u>
+        <u><a class="grey-text" href="https://brandstore.tirol/partnership">PARTNERSCHAFT</a></u>
+        <u><a class="grey-text" href="https://brandstore.tirol/individual_companydesign">FIRMENDESIGN</a></u>
+        <u><a class="grey-text" href="https://brandstore.tirol/susi_kimmel">SUSI KIMMEL</a></u>
+        <u><a class="grey-text" href="https://brandstore.tirol/black_limited">BLACK LIMITED</a></u>
   greetings:
 
 # IMPRESSIONEN
 impressionen_your_shop:
   - collections: "&#35;aufaguadezeit"
     id: aktuelles
-    albumID: "6559047385526062609"
+    #albumID: "6559047385526062609"
+    albumID: "6569144106452093697"
