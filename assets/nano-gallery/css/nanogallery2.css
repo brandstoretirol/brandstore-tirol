@@ -9,6 +9,7 @@
 	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	-o-box-sizing: content-box;
+	background-color: #000;
 }
 
 .nGY2 .ngy2_container {
@@ -17,6 +18,7 @@
 	font-size: 1.0em;
 	line-height: normal;
 	padding: 0px;
+	background-color: #000;
 	margin: 0 auto;
 	overflow: hidden;
   visibility: visible;
@@ -340,7 +342,7 @@
 .nGY2 .nGY2GThumbnailAlbumTitle {
 	color:#fff;
 	margin: 5px 1px 1px 1px;
-  padding: 0px 0px;
+	padding: 0px 0px;
   left: 0; right: 0;
   white-space: nowrap;
 	overflow:hidden;
@@ -599,11 +601,13 @@
   text-align: left;
   top: 50%;
   left: 50%;
-  width: 50%;
-  padding: 15px 30px;
+	width: 85%;
+	padding: 15px 30px;
   /*max-width: 630px;
   min-width: 320px;*/
-  height: auto;
+	/*height: auto;*/
+	height: 50%;
+	overflow: scroll;
   background: #fff;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -640,7 +644,8 @@
   padding : 10px 10px;
   font-size: 1.2em;
 	cursor: pointer;
-  display:block;
+	display:block;
+	text-align: justify;
 }
 @media only screen and (max-device-width : 480px) {
   .nGY2PopupContent {
@@ -917,11 +922,13 @@
 }
 
 .nGY2 .toolbar .ngbt {
-  font-size:1.5em;
+	/*font-size:1.5em;*/
+	font-size:1em;
 	display: table-cell;
 	cursor:pointer;
 	padding: 2px 5px;
 	vertical-align:middle;
+	text-align: justify;
 }
 
 .nGY2 .ngy2viewerToolAction {
