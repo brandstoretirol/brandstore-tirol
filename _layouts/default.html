@@ -18,7 +18,7 @@
     <link rel="icon" type="image/png" href="https://brandstore.at/Images/fav-icon-192x192.png" sizes="192x192" />
     <link  href="{{ '/assets/nano-gallery/css/nanogallery2.css' | prepend: site.baseurl }}" rel="stylesheet" type="text/css">
     
-    <!-- Scripts -->
+    <!-- Scripts -->	
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="{{ '/assets/js/bin/materialize.js' | prepend: site.baseurl }}"></script>
     <script type="text/javascript" src="{{ '/assets/nano-gallery/jquery.nanogallery2.core.js' | prepend: site.baseurl }}"></script>
@@ -26,6 +26,36 @@
       window.ngImgMax = 720;
     </script>
     <script src="{{ '/assets/nano-gallery/jquery.nanogallery2.data_google2.js' | prepend: site.baseurl }}"></script>
+	
+	<script>        
+        var dojoConfig = {
+			async: true,
+			packages: [ {
+				name: 'widgets',
+				location: {{ "'/widgets'" | prepend: site.baseurl }}
+			} ]
+        };
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/dojo/1.13.0/dojo/dojo.js"></script>
+	<script>
+		require([ "dojo/domReady!", "widgets/wishlist" ], function(ready, wishlist){
+
+			//ready(function(){
+				window.wishlist = new wishlist({
+					style: {
+						border: "1px solid white",
+						color: "white",
+						backgroundColor: "black"
+					}
+				});
+				window.wishlist.placeAt(document.body);
+				
+				$(window.wishlist.domNode).modal();
+				
+				console.log(window.wishlist);
+			//});
+		});
+	</script>
   </head>
   <body>
 
@@ -256,6 +286,12 @@
 
     ::-webkit-scrollbar {
       width: 10px; }
+	  
+	.wishlist .collection-item {
+		color: black;
+	}
+	
+	
 
 </style>
 
