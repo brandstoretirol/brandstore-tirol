@@ -84,7 +84,6 @@
 			xhr("/martini_galleries", {
 				handleAs: "string"
 			}).then(lang.hitch(this, function(result){
-				console.log(result);
 				domAttr.set(this.galleriesContainerNode, "innerHTML", result);
 			}), function(err){
 				// Handle the error condition
