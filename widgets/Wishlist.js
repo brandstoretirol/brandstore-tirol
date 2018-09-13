@@ -83,14 +83,26 @@
 			this._rawItems.splice(indexInArray, 1);
 			
 			this._saveRawItems();
+			
+			this._handleEmptyListMessageVisibility();
 		},
 		
 		show: function(){
 			domStyle.set( this.domNode, "zIndex", this._getHighestZindex() + 1 );
 			M.Modal.getInstance(this.domNode).open();
+			
+			this._handleEmptyListMessageVisibility();
 		},
 		close: function(){
 			M.Modal.getInstance(this.domNode).close()
+		},
+		
+		_handleEmptyListMessageVisibility: function(){
+			if(this._items.length == 0){
+				domStyle.set(this.emptyListMessageNode, "display", "");
+			}else{
+				domStyle.set(this.emptyListMessageNode, "display", "none");
+			}
 		},
 		
 		_getHighestZindex: function(){
