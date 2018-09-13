@@ -81,7 +81,7 @@
 		
 		_loadGalleries: function(){
 			
-			xhr("martini_galleries", {
+			xhr("/martini_galleries", {
 				handleAs: "string"
 			}).then(lang.hitch(this, function(result){
 				console.log(result);
