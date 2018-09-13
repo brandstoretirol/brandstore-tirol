@@ -8,7 +8,8 @@
 	"dojo/_base/array",
 	"dojo/dom-attr",
     "dojo/dom-style",
-    "dojo/dom-class"
+    "dojo/dom-class",
+	"dojo/request/xhr"
 ], function(
 	declare, 
 	_WidgetBase, 
@@ -19,7 +20,8 @@
 	array,
 	domAttr,
 	domStyle,
-	domClass) {
+	domClass,
+	xhr) {
 
     return declare("widgets.Wishlist", [_WidgetBase, _TemplatedMixin], {
         templateString: template,
@@ -77,6 +79,20 @@
 			}
 		},
 		
+		_loadGalleries: function(){
+			
+			xhr("martini_galleries", {
+				handleAs: "string"
+			}).then(lang.hitch(this, function(result){
+				console.log(result);
+				domAttr.set(this.galleriesContainerNode, "innerHTML", result);
+			}), function(err){
+				// Handle the error condition
+			});			
+
+			
+		},
+		
 		removeItem: function(item){
 			var indexInArray = array.indexOf(this._items, item);
 			this._items.splice(indexInArray, 1);
@@ -131,6 +147,7 @@
             this.inherited(arguments);
 			
 			this._loadRawItems();
+			this._loadGalleries();
 		}
     });
 
