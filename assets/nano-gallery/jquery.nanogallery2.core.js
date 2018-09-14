@@ -9413,10 +9413,10 @@
       
       if( imageID == '' && (albumID == '-1' || albumID == '0' || G.O.album == albumID ) ) {
         // root album level --> do not set top.location.hash if not already set
-        if( location.hash != '' ) {
+        if( location.hash != '' ) { 
           // try to clear the hash if set
           if ("pushState" in history) {
-            history.pushState("", document.title, window.location.pathname + window.location.search);
+            history.pushState("", document.title, window.location.pathname + window.location.search + window.location.hash);
           }
           else {
             location.hash='';
