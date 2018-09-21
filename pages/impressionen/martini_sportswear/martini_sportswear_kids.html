@@ -70,7 +70,7 @@ ambassador: brands.martini_sportswear.martini_sportswear_kids.martini_sportswear
 		<div class="col s12">
 			
 			<!-- BMS Gallery -->
-			<div data-nanogallery2='{
+			<div id='kidsgallery' data-nanogallery2='{
 					"thumbnailWidth": "auto",
 					"thumbnailBorderVertical": 1,
 					"thumbnailBorderHorizontal": 1,
@@ -94,7 +94,14 @@ ambassador: brands.martini_sportswear.martini_sportswear_kids.martini_sportswear
 				}'>
 				{% include gallery/gallery_content_kids.html %}
 			</div>
-
+			
+			<script>
+				function myListener(e) {
+					console.log(e);
+				}
+				$("#kidsgallery").on('shoppinCartUpdated.nanogallery2',myListener);
+			</script>
+			
 			<!-- google gallery
 			<div class="tabs" style="background-color: black;">
 					{% for impression in site.data.brands.martini_sportswear_groups.martini_sportswear_kids.impressionen_martini_sportswear_kids %}

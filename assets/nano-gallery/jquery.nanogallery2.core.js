@@ -1304,7 +1304,7 @@
       title :                     ''
     },
 
-    thumbnailToolbarImage :       { topLeft: 'cart', topRight : 'featured' }, //cart aktivieren
+    thumbnailToolbarImage :       { topLeft: 'cart', topRight : 'featured' }, //cart aktivieren -- statt select kommt cart
     thumbnailToolbarAlbum :       { topLeft: 'select', topRight : 'counter'  },
     thumbnailDisplayInterval :    15,
     thumbnailL1DisplayInterval :  null,
