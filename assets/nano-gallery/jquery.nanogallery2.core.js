@@ -1333,9 +1333,9 @@
       align :                     'center',
       autoMinimize :              true,
       //standard :                  'minimizeButton,label',
-      standard :                  'infoButton,shareButton,linkOriginalButton,fullscreenButton',
+      standard :                  'infoButton,shareButton,fullscreenButton',
       //minimized :                 'minimizeButton,label,infoButton,shareButton,downloadButton,linkOriginalButton,fullscreenButton'
-      minimized :                 'infoButton,shareButton,linkOriginalButton,fullscreenButton'
+      minimized :                 'infoButton,shareButton,fullscreenButton'
     },
     viewerTools : {
       topLeft :                   'pageCounter,playPauseButton',
@@ -1391,6 +1391,7 @@
       thumbnailCounter:             '<i class="nGY2Icon icon-picture"></i>',
       thumbnailShare:               '<i class="nGY2Icon icon-ngy2_share2"></i>',
       thumbnailDownload:            '<i class="nGY2Icon icon-ngy2_download2"></i>',
+      //thumbnailInfo:                '<i class="nGY2Icon icon-ngy2_info2"></i>',
       thumbnailInfo:                '<i class="nGY2Icon icon-basket"></i>',
       thumbnailCart:                '<i class="nGY2Icon icon-basket"></i>',
       thumbnailDisplay:             '<i class="nGY2Icon icon-ngy2_zoom_in2"></i>',
@@ -1423,6 +1424,7 @@
       viewerZoomIn:                 '<i class="nGY2Icon icon-ngy2_zoom_in2"></i>',
       viewerZoomOut:                '<i class="nGY2Icon icon-ngy2_zoom_out2"></i>',
       viewerLinkOriginal:           '<i class="nGY2Icon icon-ngy2_external2"></i>',
+      //viewerInfo:                   '<i class="nGY2Icon icon-ngy2_info2"></i>', 
       viewerInfo:                   '<i class="nGY2Icon icon-basket"></i>',
       viewerShare:                  '<i class="nGY2Icon icon-ngy2_share2"></i>',
       user:                         '<i class="nGY2Icon icon-user"></i>',
