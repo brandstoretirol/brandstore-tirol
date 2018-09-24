@@ -45,6 +45,10 @@
 			
 		},
 		
+		_getValueAttr: function(){
+			return this.value;
+		},
+		
 		postMixInProperties: function () {
             this.inherited(arguments);
         },

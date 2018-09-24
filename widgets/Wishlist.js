@@ -36,6 +36,44 @@
 		  this._rawItems = [];
 		},
 		
+		_getEmailBody: function(){
+			var bodytext = "";
+			var newline = "\r\n";			
+			
+			bodytext += "Hallo Tom!" + newline;
+			bodytext += "Meine Wunschliste enthält folgende Artikel:" + newline + newline;
+			
+			for(var i = 0; i < this._items.length; i++){
+				var item = this._items[i];
+				
+				var value = item.get("value");
+				bodytext += "#" + (i+1) + ". " + value.dispname + ": " + value.number + ', ' + value.color + ', ' + value.size + newline;
+			}
+			
+			bodytext += newline + "Bitte wirf einen Blick darauf." + newline;
+			
+			return encodeURIComponent(bodytext);
+		},
+		
+		_onClick_SendMail: function(evt){
+			var email = "tom@brandstore.tirol";
+			var subject = "Wunschliste";
+			var body_message = this._getEmailBody();
+			
+			var mailto_link = 'mailto:' + email + '?subject=' + subject + '&body=' + body_message;
+
+			win = window.open(mailto_link, 'emailWindow');
+			if (win && win.open && !win.closed) win.close();
+		},
+		
+		_handleEmailButtonVisibility: function(){
+			if(this._items.length == 0){
+				domStyle.set(this.emailButtonContainer, "display", "none" );
+			}else{
+				domStyle.set(this.emailButtonContainer, "display", "block" );
+			}
+		},
+		
 		addItem: function(name, number, color, size, thumb){
 			this.addItem_silent(name, number, color, size, thumb);
 			this._saveRawItems();
@@ -59,6 +97,8 @@
 			this._items.push(item);
 			this._rawItems.push(newItem);
 			item.placeAt(this.itemCollectionNode);
+			
+			this._handleEmailButtonVisibility();
 		},
 		
 		_saveRawItems: function(){
@@ -100,6 +140,7 @@
 			this._saveRawItems();
 			
 			this._handleEmptyListMessageVisibility();
+			this._handleEmailButtonVisibility();
 		},
 		
 		show: function(){
@@ -107,6 +148,8 @@
 			M.Modal.getInstance(this.domNode).open();
 			
 			this._handleEmptyListMessageVisibility();
+			
+			this._handleEmailButtonVisibility();
 		},
 		close: function(){
 			M.Modal.getInstance(this.domNode).close()
