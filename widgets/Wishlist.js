@@ -40,7 +40,7 @@
 			var bodytext = "";
 			var newline = "\r\n";			
 			
-			bodytext += "Hallo Tom!" + newline;
+			bodytext += "Hallo liebes BRANDSTORE.TIROL Team!" + newline;
 			bodytext += "Meine Wunschliste enthält folgende Artikel:" + newline + newline;
 			
 			for(var i = 0; i < this._items.length; i++){
@@ -50,14 +50,14 @@
 				bodytext += "#" + (i+1) + ". " + value.dispname + ": " + value.number + ', ' + value.color + ', ' + value.size + newline;
 			}
 			
-			bodytext += newline + "Bitte wirf einen Blick darauf." + newline;
+			bodytext += newline + "Bitte werft einen Blick darauf und gebt mir Bescheid." + newline;
 			
 			return encodeURIComponent(bodytext);
 		},
 		
 		_onClick_SendMail: function(evt){
-			var email = "tom@brandstore.tirol";
-			var subject = "Wunschliste";
+			var email = "hallo@brandstore.tirol";
+			var subject = "WUNSCHLISTE";
 			var body_message = this._getEmailBody();
 			
 			var mailto_link = 'mailto:' + email + '?subject=' + subject + '&body=' + body_message;
