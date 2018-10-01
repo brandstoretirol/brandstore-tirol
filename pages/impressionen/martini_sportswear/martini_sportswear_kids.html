@@ -91,17 +91,29 @@ ambassador: brands.martini_sportswear.martini_sportswear_kids.martini_sportswear
 					"thumbnailAlignment": "center",
 					"gallerySorting": "titleasc",
 					"galleryFilterTags": "description",
-					"thumbnailLevelUp": true
+					"thumbnailLevelUp": true,
+					"thumbnailToolbarImage" : { "topLeft":"cart"}
 				}'>
 				{% include gallery/gallery_content_kids.html %}
 			</div>
 			
 			<!-- shoppping cart -->
 			<script>
-				function myListener(e) {
-					console.log(e);
+			function shoppingCartUpdatedListener(e) {
+				var gallery =  $(this);				
+				var currentImage = null;
+				
+				var basket = gallery.nanogallery2('shoppingCartGet');
+				for(var i = 0; i < basket.length; i++){
+					var item = basket[i];
+					
+					currentImage = item.idx; // immer den zuletzt hinzugefügten artikel nehmen
 				}
-				$("#kidsgallery").on('shoppingCartUpdated.nanogallery2',myListener);
+				
+				gallery.nanogallery2('ItemDisplayInfo', gallery.nanogallery2('data').items[currentImage]);
+			} 
+
+			$("#kidsgallery").on( 'shoppingCartUpdated.nanogallery2', shoppingCartUpdatedListener );
 			</script>
 			
 			<!-- google gallery

@@ -1468,6 +1468,11 @@
 
       var nG2=$(this).data('nanogallery2data').nG2;
       switch(args){
+		case 'ItemDisplayInfo':
+		  nG2.ItemDisplayInfo(option);
+		  
+          break;
+		  
         case 'displayItem':
           nG2.DisplayItem(option);
           break;
@@ -1710,7 +1715,13 @@
         DisplayAlbum( '-1', IDs.albumID );
       }
     };
-    
+	
+	/**
+	*	viewerInfo anzeigen direkt über item
+	*/
+    this.ItemDisplayInfo = function( item ) {
+      ItemDisplayInfo( item );
+    };   
       
       
     var CountItemsToDisplay = function( gIdx ) {

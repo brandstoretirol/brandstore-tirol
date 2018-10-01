@@ -71,7 +71,7 @@ ambassador: brands.martini_sportswear.martini_sportswear_men.martini_sportswear_
 		<div class="col s12">
 			
 			<!-- BMS Gallery -->
-			<div data-nanogallery2='{
+			<div id="menGallery" data-nanogallery2='{
 					"thumbnailWidth": "auto",
 					"thumbnailBorderVertical": 1,
 					"thumbnailBorderHorizontal": 1,
@@ -91,11 +91,28 @@ ambassador: brands.martini_sportswear.martini_sportswear_men.martini_sportswear_
 					"thumbnailAlignment": "center",
 					"gallerySorting": "titleasc",
 					"galleryFilterTags": "description",
-					"thumbnailLevelUp": true
+					"thumbnailLevelUp": true,
+					"thumbnailToolbarImage" : { "topLeft":"cart"}
 				}'>
 				{% include gallery/gallery_content_men.html %}
 			</div>
+			<script>
+			function shoppingCartUpdatedListener(e) {
+				var gallery =  $(this);				
+				var currentImage = null;
+				
+				var basket = gallery.nanogallery2('shoppingCartGet');
+				for(var i = 0; i < basket.length; i++){
+					var item = basket[i];
+					
+					currentImage = item.idx; // immer den zuletzt hinzugefügten artikel nehmen
+				}
+				
+				gallery.nanogallery2('ItemDisplayInfo', gallery.nanogallery2('data').items[currentImage]);
+			} 
 
+			$("#menGallery").on( 'shoppingCartUpdated.nanogallery2', shoppingCartUpdatedListener );
+			</script>
 			<!-- google gallery
 			<div class="tabs" style="background-color: black;">
 					{% for impression in site.data.brands.martini_sportswear_groups.martini_sportswear_men.impressionen_martini_sportswear_men %}
