@@ -40,7 +40,7 @@
 			var bodytext = "";
 			var newline = "\r\n";			
 			
-			bodytext += "Hallo liebes BRANDSTORE.TIROL Team!" + newline;
+			bodytext += "Hallo liebes BRANDSTORE.TIROL Team!" + newline + newline;
 			bodytext += "Meine Wunschliste enthält folgende Artikel:" + newline + newline;
 			
 			for(var i = 0; i < this._items.length; i++){
