@@ -1,0 +1,20 @@
+# julia schwaighofer
+ambassador_julia_schwaighofer:
+- title: JULIA SCHWAIGHOFER
+  info: >
+        TEXT JULIA
+        <br>
+  info2:
+  img-url: assets/img/banner/martini_sportswear_brandlogo.png
+  url: ambassador_julia_schwaighofer
+  hashtag: "&#35;lebdeilebn"
+  links: 
+        <u><a class="grey-text" href="https://brandstore.tirol/ambassador">BOTSCHAFTER</a></u>
+  greetings:
+
+# IMPRESSIONEN
+impressionen_ambassador_julia_schwaighofer:
+  - collections: "JULIA"
+    id: julia
+    albumID: "6576875621671157953"
+    #albumID: "6569144106452093697"
