@@ -1,0 +1,76 @@
+---
+layout: default
+title: JULIA SCHWAIGHOFER
+permalink: /ambassador_julia_schwaighofer
+ambassador_julia_schwaighofer: specials.ambassador_julia_schwaighofer.ambassador_julia_schwaighofer.ambassador_julia_schwaighofer
+---
+
+{% capture ambassador_julia_schwaighofer %}
+{{page.ambassador_julia_schwaighofer}}
+{% endcapture %}
+
+</div>
+{% include teaser/ambassador_julia_schwaighofer-teaser.html ambassador_julia_schwaighofer=ambassador_julia_schwaighofer %}
+ <script>
+	function init_gallery(albumID){
+	
+		if(typeof($('#nanogalleryGeneric')) != "undefined"){
+			$('#nanogalleryGeneric').nanogallery2("destroy");
+			$('#nanogalleryGeneric').remove();			
+		}
+		
+		var e = document.createElement("div");
+		$(e).attr('id','nanogalleryGeneric');
+		$('#galleryContainer').append(e);
+		
+		$("#nanogalleryGeneric").nanogallery2({
+			"userID": "102674011871822108337",
+			"kind": "google2",
+			"google2URL": "https://brandstore.at/nanogp/nanogp.php",
+			"album": albumID,
+			"thumbnailWidth": "auto",
+			  "thumbnailBorderVertical": 1,
+			  "thumbnailBorderHorizontal": 1,
+			  "colorScheme": {
+				"thumbnail": {
+				  "background": "rgba(0,0,0,1)"
+				}
+			  },
+			  "thumbnailLabel": {
+				"display": false
+			  },
+			  "galleryDisplayMode": "pagination",
+				"galleryMaxRows": 3,
+				"gallerySorting": "random",
+			  "thumbnailAlignment": "center"
+		});
+	}
+	
+	$( document ).ready(function(){
+		document.getElementById("anchor_andi").click(); // first tab select
+	});
+
+  </script>
+<div class="container">
+
+<div class="row">
+  <div class="col s12">
+  {% for ambassador_julia_schwaighofer in site.data.specials.ambassador_groups.ambassador_julia_schwaighofer.ambassador_julia_schwaighofer %}
+    <h6>IMPRESSIONEN</h6>
+    <hr style="margin-left: 0px;margin-right: 0px;">
+  {% endfor %}
+  </div>
+</div>
+<div class="row">
+  <div class="col s12">
+			<div class="tabs" style="background-color: black;">
+      {% for impression in site.data.specials.ambassador_groups.ambassador_julia_schwaighofer.impressionen_ambassador_julia_schwaighofer %}
+        <li class="tab col s3"><a id="anchor_{{impression.id}}" href="#galleryContainer" onclick="init_gallery('{{impression.albumID}}')" class="white-text" style="border-bottom-color: black;">{{impression.collections}}</a></li>
+      {% endfor %}
+    </div>    
+  </div>
+  <div class="col s12 gallery-wrapper" id="galleryContainer">
+  </div>
+</div>
+</div>
+</div>
