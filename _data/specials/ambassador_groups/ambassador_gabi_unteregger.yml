@@ -1,0 +1,46 @@
+# gabi unteregger
+ambassador_gabi_unteregger:
+- title: GABI UNTEREGGER
+  info: >
+        Ich bin am 24.11.1983 bei Schneesturm in einem Krankwagen in München geboren. 
+        Mich hat es im Laufe meines Lebens immer weiter in die Berge gezogen. Nach meiner Zeit am Schliersee bin ich 
+        2005 nach Innsbruck gezogen. Dort habe ich Gesundheits- und Leistungssport studiert und im Anschluss
+        den Master in Sport – und Bewegungswissenschaften gemacht. 
+        <br>
+        In dieser Zeit konnte ich meine Leidenschaft die Berge und das Laufen vertiefen.
+        <br>
+        <br>
+        Es ging in meinem Leben nicht immer alles Bergauf. Nach einer Vielzahl von Verletzungen weiß ich was es 
+        bedeutet, sich wieder nach oben zu arbeiten müssen. Geprägt hat mich mein schwerer Lawinenunfall am Ortler. 
+        <br>
+        <br>
+        Trotzdem zieht es mich täglich in die Berge weil es dort oben nicht viel braucht um Glücklich zu sein und 
+        ich mich in den Bergen dahoam fühl. Die unbeschreiblichen Momente einem Steinbock in die Augen zu schauen, 
+        die ersten Sonnenstrahlen auf der Haut zu spüren oder der untergehenden Sonne entgegenzulaufen, zeigen mir
+        immer wieder, wie wertvoll das Leben ist. 
+        Dies sind die unbezahlbaren Augenblicke die mir vor und nach der Arbeit Energie und Motivation für die 
+        ultra Läufe geben. 
+
+        
+        <div style="text-align:left">
+        <span style="font-size: 20px">Sportliche Erfolge</span>
+        <br>
+        2012: Zermatt Marathon,  erster Maratho
+        <br>
+        2012: Karwendelmarsch bzw. Karwendellauf, 3. Platz
+        </div>
+        <br>
+  info2:
+  img-url: assets/img/banner/martini_sportswear_brandlogo.png
+  url: ambassador_gabi_unteregger
+  hashtag: "&#35;lebdeilebn"
+  links: 
+        <u><a class="grey-text" href="https://brandstore.tirol/ambassador">BOTSCHAFTER</a></u>
+  greetings:
+
+# IMPRESSIONEN
+impressionen_ambassador_gabi_unteregger:
+  - collections: "GABI"
+    id: gabi
+    albumID: "6622553754402031313"
+    #albumID: "6569144106452093697"
