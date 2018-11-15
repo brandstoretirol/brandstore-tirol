@@ -14,7 +14,9 @@ ambassador_rene_antmann:
         Immer wieder gelingt es mir diese tollen  Momente unterwegs beim Training eindrucksvoll festzuhalten. Ich hoffe damit auch anderen von der Schönheit unsere Natur und dem möglichen Leistungsvermögens unseres Körpers inspirieren zu können!
         <br>
         <br>
-       <span style="font-size: 20px">Das wichtigste Gebot lautet dabei natürlich&#58; Macht was ihr liebt und habt Spaß dabei, dann wird es gut!</span>
+        <div style="text-align:left">
+        <span style="font-size: 20px">Das wichtigste Gebot lautet dabei natürlich&#58; Macht was ihr liebt und habt Spaß dabei, dann wird es gut!</span>
+        </div>
   info2:
   img-url: assets/img/banner/martini_sportswear_brandlogo.png
   url: ambassador_rene_antmann
