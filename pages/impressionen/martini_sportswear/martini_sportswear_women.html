@@ -57,7 +57,7 @@ ambassador: brands.martini_sportswear.martini_sportswear_women.martini_sportswea
 </script>
 	
 <div class="container">
-
+	<!-- Gallery 1 -->
 	<div class="row">
 		<div class="col s12">
 		{% for martini_sportswear_women in site.data.brands.martini_sportswear_groups.martini_sportswear_women.martini_sportswear_women %}
@@ -114,7 +114,8 @@ ambassador: brands.martini_sportswear.martini_sportswear_women.martini_sportswea
 			$("#womenGallery").on( 'shoppingCartUpdated.nanogallery2', shoppingCartUpdatedListener );
 			</script>
 
-	<!--  Gallery 2 -->	
+	<!-- Gallery 2 -->
+	<!-- 
 	<div class="row">
 		<div class="col s12">
 		{% for martini_sportswear_women in site.data.brands.martini_sportswear_groups.martini_sportswear_women.martini_sportswear_women %}
@@ -124,7 +125,7 @@ ambassador: brands.martini_sportswear.martini_sportswear_women.martini_sportswea
 		</div>
 	</div>
 
-			<!-- BMS Gallery OLD -->
+			<-- BMS Gallery OLD --
 			<div id="womenGalleryold" data-nanogallery2='{
 				"thumbnailWidth": "auto",
 				"thumbnailBorderVertical": 1,
@@ -148,7 +149,7 @@ ambassador: brands.martini_sportswear.martini_sportswear_women.martini_sportswea
 				"thumbnailLevelUp": true,
 				"thumbnailToolbarImage" : { "topLeft":"cart"}
 			}'>
-			{% include gallery/gallery_content_men.html %}
+			{% include gallery/gallery_content_women_old.html %}
 		</div>
 		<script>
 		function shoppingCartUpdatedListener(e) {
@@ -166,7 +167,7 @@ ambassador: brands.martini_sportswear.martini_sportswear_women.martini_sportswea
 		} 
 
 		$("#womenGalleryold").on( 'shoppingCartUpdated.nanogallery2', shoppingCartUpdatedListener );
-		</script>
+		</script> -->
 
 			<!-- google gallery
 			<div class="tabs" style="background-color: black;">
