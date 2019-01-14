@@ -1,0 +1,65 @@
+ <!-- ein- ausblenden -->
+<script>
+
+  function hide_starter_text() {
+    $(".show_hide_text").hide();
+    // $(".show-hide-text").animate({
+    //   height: 'toggle'      
+    // });
+    $(".less").hide();
+    $(".more").show();
+  }
+
+  function show_starter_text() {
+    $(".show_hide_text").show();
+    $(".more").hide();
+    $(".less").show();
+  }
+
+</script>
+
+<div class="row starter_text" style="background-color: #000; color: #fff; padding: 10px 0; text-align: justify">
+
+  <div class="container">
+    
+    {% for item in site.data.specials.ambassador_groups.ambassador_melanie_rubisoir.ambassador_melanie_rubisoir %}
+    <div class="col s12 "style="padding-right: 0px;">
+      <div class="col s10" style="padding-left: 0; text-align: left;">
+        <h6>{{ item.title }}</h6>
+      </div>
+     <div class="col s2">
+      <i class="material-icons right less" style="margin-top: 15px; cursor: pointer;" onclick="hide_starter_text()">expand_less</i>
+      <i class="material-icons right more" style="margin-top: 15px; cursor: pointer; display: none;" onclick="show_starter_text()">expand_more</i>
+     </div>
+    </div>
+    <div class="show_hide_text">
+      <div class="col s12">
+        <hr style="padding-left: 0; margin-left: 0; padding-right: 0; margin-right: 0;">
+      </div>
+      <div class="col s12 m6">
+        <p>{{ item.info }}</p>
+      </div>
+      <!--<div class="col s12 m6">
+        <p>{{ item.info2 }}</p>-->
+        
+      <div class="col s12 m6">
+          <img src="/assets/img/ambassadors/melanie_rubisoir.png" alt="" style="width: 100%;margin-top: 20px;">
+      </div>
+
+      <div class="col s12">
+        <p style="font-size: 15px; text-align: center;">{{ item.hashtag }}</p>
+      </div>
+    </div>
+
+        <div class="col s12">
+            <p style="font-size: 15px; text-align: left;">{{ item.links }}</p>
+        </div>
+        
+      <div class="col s12">
+       <!-- <img src="{{ '/assets/img/logos/bs_symbol_white_transparent.png' | relative_url }}" alt="" style="width: 80px; float: right;">
+        <p style="float: right; margin-top: 47px;">{{ item.greetings }}</p>>-->
+      </div>
+    </div>
+    {% endfor %}
+    
+</div>
