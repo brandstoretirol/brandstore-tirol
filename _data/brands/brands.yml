@@ -21,3 +21,15 @@
     - collections: ACTION
       id: action
       albumID: "6558392027930808369"
+
+#swedish fall
+- id: swedish_fall
+  title: SWEDISH FALL
+  url: swedish_fall
+  img-url: assets/img/banner/swedish_fall_brandlogo.png
+
+  # Impressionen
+  impressionen: 
+    - collections: AKTUELL
+      id: aktuell
+      albumID: "6652656923731711377"
