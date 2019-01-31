@@ -1,0 +1,176 @@
+---
+layout: default
+title: SWEDISH FALL
+permalink: /swedish_fall
+brand: brands.swedish_fall.swedish_fall
+---
+
+  {% capture swedish_fall %}
+    {{page.swedish_fall}}
+  {% endcapture %}
+
+  </div>
+	{% include teaser/swedish_fall-teaser.html swedish_fall=swedish_fall %}
+
+  <script>
+	function init_gallery(albumID){
+	
+		if(typeof($('#nanogalleryGeneric')) != "undefined"){
+			$('#nanogalleryGeneric').nanogallery2("destroy");
+			$('#nanogalleryGeneric').remove();			
+		}
+		
+		var e = document.createElement("div");
+		$(e).attr('id','nanogalleryGeneric');
+		$('#galleryContainer').append(e);
+		
+		$("#nanogalleryGeneric").nanogallery2({
+			"userID": "102674011871822108337",
+			"kind": "google2",
+			"google2URL": "https://brandstore.at/nanogp/nanogp.php",
+			"album": albumID,
+			"thumbnailWidth": "auto",
+			  "thumbnailBorderVertical": 1,
+			  "thumbnailBorderHorizontal": 1,
+			  "colorScheme": {
+				"thumbnail": {
+				  "background": "rgba(0,0,0,1)"
+				}
+			  },
+			  "thumbnailLabel": {
+				"display": false
+			  },
+			  "galleryDisplayMode": "pagination",
+				"galleryMaxRows": 3,
+				"gallerySorting": "random",
+			  "thumbnailAlignment": "center"
+		});
+	}
+	
+	$( document ).ready(function(){
+		document.getElementById("anchor_AKTUELL").click();
+	});
+
+	</script>
+
+	<!--ACTION GALLERY-->
+	<div class="container" id="kollektion">
+
+		<!-- klassifizierung -->
+		<div class="row">
+				<div class="col s12">
+					<h6>AKTUELLE KOLLEKTION</h6>
+					<hr style="margin-left: 0px;margin-right: 0px;">
+				</div>
+		</div>
+		<!-- <div class="row" style="background-color: white; color: black">
+				{% assign swedish_fall_groups = site.data.brands.swedish_fall_groups %}
+				{% include card.html item=swedish_fall_groups size="s12 m3" %}
+		</div> 
+	
+			<div class="row">
+					<div class="col s12">
+						<h6>Die "VERY COOL PEOPLE" Galerie </h6>
+						<hr style="margin-left: 0px;margin-right: 0px;">
+					</div>
+			</div> -->
+	
+			<div class="row">
+				<div class="col s12">
+					<div class="tabsAction" style="background-color: black;">
+						<div data-nanogallery2='{
+							"userID": "102674011871822108337",
+							"kind": "google2",
+							"google2URL": "https://brandstore.at/nanogp/nanogp.php",
+							"album": "6558392027930808369",
+							"thumbnailWidth": "auto",
+							"thumbnailBorderVertical": 1,
+							"thumbnailBorderHorizontal": 1,
+							"colorScheme": {
+							"thumbnail": {
+								"background": "rgba(0,0,0,1)"
+							}
+							},
+							"thumbnailLabel": {
+							"display": false
+							},
+							"galleryDisplayMode": "pagination",
+							"galleryMaxRows": 3,
+							"gallerySorting": "random",
+							"thumbnailAlignment": "center"
+						}'>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	<!--SWEDISH FALL GALLERY-->
+  <div class="container">
+		
+		<!-- klassifizierung -->
+		<!--content-->
+
+  <div class="row">
+    <div class="col s12">
+    {% for brand in site.data.brands.swedish_fall.swedish_fall %}
+      <h6>IMPRESSIONEN</h6>
+      <hr style="margin-left: 0px;margin-right: 0px;">
+    {% endfor %}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s12">
+			<div class="tabs" style="background-color: black;">
+        {% for impression in site.data.brands.swedish_fall.impressionen_swedish_fall %}
+			<li class="tab col s3"><a id="anchor_{{impression.collections}}" href="#galleryContainer" onclick="init_gallery('{{impression.albumID}}')" class="white-text" style="border-bottom-color: black;">{{impression.collections}}</a></li>
+        {% endfor %}
+      </div>    
+    </div>
+			<div class="col s12 gallery-wrapper" id="galleryContainer">
+			</div>
+		</div> 
+	</div>
+
+	<!--ACTION GALLERY
+	<div class="container">
+
+		<div class="row">
+				<div class="col s12">
+					<h6>PEOPLE IN ACTION</h6>
+					<hr style="margin-left: 0px;margin-right: 0px;">
+				</div>
+		</div>
+
+		<div class="row">
+			<div class="col s12">
+				<div class="tabsAction" style="background-color: black;">
+					<div data-nanogallery2='{
+						"userID": "102674011871822108337",
+						"kind": "google2",
+						"google2URL": "https://brandstore.at/nanogp/nanogp.php",
+						"album": "6558392027930808369",
+						"thumbnailWidth": "auto",
+						"thumbnailBorderVertical": 1,
+						"thumbnailBorderHorizontal": 1,
+						"colorScheme": {
+						"thumbnail": {
+							"background": "rgba(0,0,0,1)"
+						}
+						},
+						"thumbnailLabel": {
+						"display": false
+						},
+						"galleryDisplayMode": "pagination",
+						"galleryMaxRows": 3,
+						"gallerySorting": "random",
+						"thumbnailAlignment": "center"
+					}'>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>-->
+
+</div>
