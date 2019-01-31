@@ -1,0 +1,25 @@
+# SWEDISH FALL
+swedish_fall:
+- title: SWEDISH FALL
+  url: swedish_fall
+  info: Die Martini-Geschichte ist eine Geschichte permanenter Entwicklungen. Alles begann mit der Hose - 1958 startete Martin Hornegger sen. in Annaberg mit seiner Sporthosen-Maßschneiderei. Das Engagement ist ausgeprägt, das Qualitätsdenken ebenfalls. Das spricht sich herum, bis in die Spitzen des Sports. In den 60er-Jahren stellte Martin Hornegger sen. die Sprunganzüge für die österreichische Nationalmannschaft her.
+        <br>      
+        Als dann bei einem der legendären Springen in Bischofshofen drei Österreicher in Hornegger-Anzügen die Plätze 1 
+        <br>
+  info2: Martini Sportswear Austria agiert seit der ersten Stunde von Annaberg/Salzburg aus. Lisa Moser-Hornegger zeichnet verantwortlich für Management und Kreation, Martin Hornegger für Produktion und Qualitätskontrolle. Hier am Unternehmenssitz – mitten in den Bergen – werden Ideen Wirklichkeit, Impulse aufgenommen und Visionen realisiert. Das eigene Atelier, die komplette Verwaltung mit Buchhaltung, Marketing, Verkauf, Auftragsannahme und -abwicklung, sowie der eigene Flagship Store sind in der Zentrale zusammengefasst. Dadurch bleibt der Martini-Spirit lebendig und die „Martini-Family“ bringt immer wieder entscheidende Entwicklungen auf den Markt. Im Fokus steht dabei die wertschätzende Kooperation, der respektvolle, familiäre Umgang miteinander, mit Händlern, Lieferanten und allen Kunden.
+        <br>
+        <br>
+  info3: <b>NUR DIE BESTEN MATERIALIEN!</b>
+        <br>
+        Martini Sportswear achtet bei ihren Produkten auf einen ausgesuchten Mix von Materialien, die für ihre 
+        <u><a class="grey-text" href="https://www.martini-sportswear.com/de/martini/technologien/polartec-stretch" target="_blank">Polartec® Power Stretch®</a></u>
+        
+# Impressionen
+impressionen_swedish_fall:
+#- collections: ACTION
+#  id: action
+#  albumID: "6558392027930808369"
+
+- collections: AKTUELL
+  id: aktuell
+  albumID: "6652656923731711377"
