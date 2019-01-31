@@ -2,7 +2,9 @@
 swedish_fall:
 - title: SWEDISH FALL - DIE MARKE FÜR ATHLETISCHE SPORTARTEN
   url: swedish_fall
-  info: Kennengelernt an der &#38; Freunde geworden beim Cheerleading-Training&#58; Silja, Lara, Jonas und Marius sind die 4 Köpfe hinter SWEDISH FALL. 
+  info: Kennengelernt an der &#38; Freunde geworden beim Cheerleading-Training&#58;
+        <br>
+        Silja, Lara, Jonas und Marius sind die 4 Köpfe hinter SWEDISH FALL. 
         <br>
         <br>
         Die Idee, eine athletische Sportmarke aufzubauen, kam ihnen genau durch diesen Sport&colon; Cheerleading. Ein SWEDISH FALL ist eine Pyramide aus dem Cheerleading. 
@@ -33,8 +35,8 @@ swedish_fall:
         <b>(&#35;swedishfall &#35;liftingathletes)</b> in unser Sortiment aufzunehmen.
         <br>
         <br>
-        <b>&#35;love &#35;passion &#35;enthusiasm &#35;dream &#35;project &#35;swedishfall &#35;liftingathletes &#35;aufaguadezeit &#35;brandstoretirol &#35;lebdeilebn</b>
-        
+        <span style="font-size: 15px; text-align: center"><b>&#35;love &#35;passion &#35;enthusiasm &#35;dream &#35;project &#35;swedishfall &#35;liftingathletes &#35;aufaguadezeit &#35;brandstoretirol &#35;lebdeilebn</b></span>
+
 # Impressionen
 impressionen_swedish_fall:
 #- collections: ACTION
