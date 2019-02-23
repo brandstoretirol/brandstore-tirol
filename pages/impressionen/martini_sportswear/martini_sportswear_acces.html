@@ -55,9 +55,9 @@ ambassador: brands.martini_sportswear.martini_sportswear_accessoires.martini_spo
 		document.getElementById("anchor_jacken").click(); // first tab select
 	});
 </script>
-	
-<div class="container">
 
+<div class="container">
+	<!-- Gallery 1 -->
 	<div class="row">
 		<div class="col s12">
 		{% for martini_sportswear_accessoires in site.data.brands.martini_sportswear_groups.martini_sportswear_accessoires.martini_sportswear_accessoires %}
@@ -113,12 +113,68 @@ ambassador: brands.martini_sportswear.martini_sportswear_accessoires.martini_spo
 
 			$("#accesGallery").on( 'shoppingCartUpdated.nanogallery2', shoppingCartUpdatedListener );
 			</script>
-			<!-- google gallery
-			<div class="tabs" style="background-color: black;">
-					{% for impression in site.data.brands.martini_sportswear_groups.martini_sportswear_accessoires.impressionen_martini_sportswear_accessoires %}
-						<li class="tab col s3"><a id="anchor_{{impression.id}}" href="#galleryContainer" onclick="init_gallery('{{impression.albumID}}')" class="white-text" style="border-bottom-color: black;">{{impression.collections}}</a></li>
-					{% endfor %}
-			</div> -->
+
+	<!-- Gallery 2 -->
+	<!--
+	<div class="row">
+		<div class="col s12">
+		{% for martini_sportswear_accessoires in site.data.brands.martini_sportswear_groups.martini_sportswear_accessoires.martini_sportswear_accessoires %}
+			<h6>ACCESSOIRES WINTER</h6>
+			<hr style="margin-left: 0px;margin-right: 0px;">
+		{% endfor %}
+		</div>
+	</div>
+
+			<-- BMS Gallery OLD --
+			<div id="accesGalleryold" data-nanogallery2='{
+				"thumbnailWidth": "auto",
+				"thumbnailBorderVertical": 1,
+				"thumbnailBorderHorizontal": 1,
+				"colorScheme": {
+					"thumbnail": {
+						"background": "rgba(0,0,0,1)"
+					}
+				},
+				"thumbnailLabel": {
+					"position": "onBottom",
+					"displayDescription": false,
+					"descriptionMultiLine": true
+				},
+				"allowHTMLinData": true,
+				"galleryDisplayMode": "pagination",
+				"galleryMaxRows": 3,
+				"thumbnailAlignment": "center",
+				"gallerySorting": "titleasc",
+				"galleryFilterTags": "description",
+				"thumbnailLevelUp": true,
+				"thumbnailToolbarImage" : { "topLeft":"cart"}
+			}'>
+			{% include gallery/gallery_content_accessoires_old.html %}
+		</div>
+		<script>
+		function shoppingCartUpdatedListener(e) {
+			var gallery =  $(this);				
+			var currentImage = null;
+			
+			var basket = gallery.nanogallery2('shoppingCartGet');
+			for(var i = 0; i < basket.length; i++){
+				var item = basket[i];
+				
+				currentImage = item.idx; // immer den zuletzt hinzugefügten artikel nehmen
+			}
+			
+			gallery.nanogallery2('ItemDisplayInfo', gallery.nanogallery2('data').items[currentImage]);
+		}
+
+		$("#accesGalleryold").on( 'shoppingCartUpdated.nanogallery2', shoppingCartUpdatedListener );
+		</script> -->
+
+		<!-- google gallery
+		<div class="tabs" style="background-color: black;">
+				{% for impression in site.data.brands.martini_sportswear_groups.martini_sportswear_accessoires.impressionen_martini_sportswear_accessoires %}
+					<li class="tab col s3"><a id="anchor_{{impression.id}}" href="#galleryContainer" onclick="init_gallery('{{impression.albumID}}')" class="white-text" style="border-bottom-color: black;">{{impression.collections}}</a></li>
+				{% endfor %}
+		</div> -->
 			
 		</div>
 		<div class="col s12 gallery-wrapper" id="galleryContainer"></div>
