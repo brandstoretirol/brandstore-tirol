@@ -91,7 +91,7 @@
         }
         if( gat != '' ) {
           // in builder
-          url += '/albumid/'+albumID+'?alt=json&kind=photo&thumbsize='+G.picasa.thumbSizes+maxResults+auth+'&imgmax=d&access_token=' + gat;
+          url += '/albumid/'+albumID+'?alt=json&kind=photo&thumbsize='+G.picasa.thumbSizes+maxResults+auth+'&imgmax='+ window.ngImgMax +'&access_token=' + gat;
         }
         else {
           if( G.O.google2URL == undefined || G.O.google2URL == '' ) {
@@ -100,7 +100,7 @@
           }
           else {
             // nanogp
-            url=G.O.google2URL + '?nguserid='+G.O.userID+'&ngalbumid='+albumID+'&alt=json&v=3&kind=photo&thumbsize='+G.picasa.thumbSizes+maxResults+auth+'&imgmax=d';
+            url=G.O.google2URL + '?nguserid='+G.O.userID+'&ngalbumid='+albumID+'&alt=json&v=3&kind=photo&thumbsize='+G.picasa.thumbSizes+maxResults+auth+'&imgmax=' + window.ngImgMax;
           }
         }
       }
@@ -352,7 +352,7 @@
         if( opt.indexOf('Gv1sRg') == -1 ) {
           opt = '&authkey=Gv1sRg'+opt.substring(9);
         }
-        var url = Google.url() + 'user/'+G.O.userID+'/albumid/'+albumID+'?alt=json&kind=photo'+opt+'&max-results=1&thumbsize='+G.picasa.thumbSizes+'&imgmax=d';
+        var url = Google.url() + 'user/'+G.O.userID+'/albumid/'+albumID+'?alt=json&kind=photo'+opt+'&max-results=1&thumbsize='+G.picasa.thumbSizes+'&imgmax=' + window.ngImgMax;
         
         PreloaderDisplay(true);
 
