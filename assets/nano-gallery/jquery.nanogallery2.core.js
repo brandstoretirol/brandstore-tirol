@@ -2632,7 +2632,8 @@
       background:             '#000',
       imageBorder:            'none',
       imageBoxShadow:         'none',
-      barBackground:          'rgba(4, 4, 4, 0.2)',
+      //barBackground:          'rgba(4, 4, 4, 0.2)',
+      barBackground:          'rgba(0, 0, 0, 0.0)',
       barBorder:              '0px solid #111',
       barColor:               '#eee',
       barDescriptionColor:    '#aaa'
@@ -2641,7 +2642,8 @@
       background:             'rgba(1, 1, 1, 0.75)',
       imageBorder:            '4px solid #f8f8f8',
       imageBoxShadow:         '#888 0px 0px 20px',
-      barBackground:          'rgba(4, 4, 4, 0.2)',
+      //barBackground:          'rgba(4, 4, 4, 0.2)',
+      barBackground:          'rgba(0, 0, 0, 0.0)',
       barBorder:              '0px solid #111',
       barColor:               '#eee',
       barDescriptionColor:    '#aaa'
