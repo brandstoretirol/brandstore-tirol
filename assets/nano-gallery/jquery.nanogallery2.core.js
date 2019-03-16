@@ -1557,6 +1557,11 @@
         case 'displayItem':
           nG2.DisplayItem(option);
           break;
+		  
+		  case 'ItemDisplayInfo':
+		  nG2.ItemDisplayInfo(option);
+
+          break;
           
         case 'search':
           return( nG2.Search(option));
@@ -1726,6 +1731,13 @@
       
       DisplayAlbum('-1', albumID);
     };
+	
+	/**
+	*	viewerInfo anzeigen direkt über item
+	*/
+    this.ItemDisplayInfo = function( item ) {
+      ItemDisplayInfo( item );
+    }; 
     
     /**
      * Set one or several items selected/unselected
