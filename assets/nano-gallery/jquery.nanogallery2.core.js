@@ -1419,13 +1419,13 @@
       position :                  'bottomOverImage',
       fullWidth :                 true,
       align :                     'center',
-      autoMinimize :              0,
-      standard :                  'minimizeButton,label',
-      minimized :                 'minimizeButton,label,infoButton,shareButton,downloadButton,linkOriginalButton,fullscreenButton'
+      autoMinimize :              true,
+      standard :                  'infoButton,shareButton,fullscreenButton',
+      minimized :                 'infoButton,shareButton,fullscreenButton'
     },
     viewerTools : {
       topLeft :                   'pageCounter,playPauseButton',
-      topRight :                  'rotateLeft,rotateRight,fullscreenButton,closeButton' 
+      topRight :                  'zoomButton,closeButton'
     },
     
     breakpointSizeSM :            480,
@@ -1477,7 +1477,7 @@
       thumbnailCounter:             '<i class="nGY2Icon-picture"></i>',
       thumbnailShare:               '<i class="nGY2Icon-ngy2_share2"></i>',
       thumbnailDownload:            '<i class="nGY2Icon-ngy2_download2"></i>',
-      thumbnailInfo:                '<i class="nGY2Icon-ngy2_info2"></i>',
+      thumbnailInfo:                '<i class="nGY2Icon icon-basket"></i>',
       thumbnailCart:                '<i class="nGY2Icon-basket"></i>',
       thumbnailDisplay:             '<i class="nGY2Icon-ngy2_zoom_in2"></i>',
       thumbnailCustomTool1:         'T1',
@@ -1509,7 +1509,7 @@
       viewerZoomIn:                 '<i class="nGY2Icon-ngy2_zoom_in2"></i>',
       viewerZoomOut:                '<i class="nGY2Icon-ngy2_zoom_out2"></i>',
       viewerLinkOriginal:           '<i class="nGY2Icon-ngy2_external2"></i>',
-      viewerInfo:                   '<i class="nGY2Icon-ngy2_info2"></i>',
+      viewerInfo:                   '<i class="nGY2Icon icon-ngy2_info2"></i>', 
       viewerShare:                  '<i class="nGY2Icon-ngy2_share2"></i>',
       viewerRotateLeft:             '<i class="nGY2Icon-ccw"></i>',
       viewerRotateRight:            '<i class="nGY2Icon-cw"></i>',
@@ -1976,7 +1976,7 @@
     // author: underscore.js - http://underscorejs.org/docs/underscore.html
     // Returns a function, that, when invoked, will only be triggered at most once during a given window of time.
     // Normally, the throttled function will run as much as it can, without ever going more than once per wait duration;
-    // but if you’d like to disable the execution on the leading edge, pass {leading: false}.
+    // but if youï¿½d like to disable the execution on the leading edge, pass {leading: false}.
     // To disable execution on the trailing edge, ditto.
     var throttle = function(func, wait, options) {
       var context, args, result;
@@ -7351,7 +7351,7 @@
         };
       }
 
-      // requestAnimationFrame polyfill by Erik Möller. fixes from Paul Irish and Tino Zijdel
+      // requestAnimationFrame polyfill by Erik Mï¿½ller. fixes from Paul Irish and Tino Zijdel
       // http://paulirish.com/2011/requestanimationframe-for-smart-animating/
       // http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
       // MIT license
@@ -7850,7 +7850,7 @@
       var vimg = new VImg(ngy2ItemIdx);
       G.VOM.items.push(vimg);
       items.push(G.I[ngy2ItemIdx]);
-      //TODO -> danger? -> pourquoi reconstruire la liste si déjà ouvert (back/forward)     
+      //TODO -> danger? -> pourquoi reconstruire la liste si dï¿½jï¿½ ouvert (back/forward)     
       var l = G.I.length;
       for( var idx = ngy2ItemIdx+1; idx < l ; idx++) {
         var item = G.I[idx];
