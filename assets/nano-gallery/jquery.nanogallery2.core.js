@@ -1509,7 +1509,7 @@
       viewerZoomIn:                 '<i class="nGY2Icon-ngy2_zoom_in2"></i>',
       viewerZoomOut:                '<i class="nGY2Icon-ngy2_zoom_out2"></i>',
       viewerLinkOriginal:           '<i class="nGY2Icon-ngy2_external2"></i>',
-      viewerInfo:                   '<i class="nGY2Icon icon-ngy2_info2"></i>', 
+      viewerInfo:                   '<i class="nGY2Icon-ngy2_info2"></i>',
       viewerShare:                  '<i class="nGY2Icon-ngy2_share2"></i>',
       viewerRotateLeft:             '<i class="nGY2Icon-ccw"></i>',
       viewerRotateRight:            '<i class="nGY2Icon-cw"></i>',
