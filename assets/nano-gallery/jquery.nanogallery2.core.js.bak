@@ -2357,7 +2357,7 @@
     G.CSSbackfaceVisibilityName = FirstSupportedPropertyName(["backfaceVisibility", "msBackfaceVisibility", "MozBackfaceVisibility", "WebkitBackfaceVisibility", "OBackfaceVisibility"]);
     G.CSStransitionName =         FirstSupportedPropertyName(["transition", "msTransition", "MozTransition", "WebkitTransition", "OTransition"]);
     G.CSSanimationName =          FirstSupportedPropertyName(["animation", "msAnimation", "MozAnimation", "WebkitAnimation", "OAnimation"]);
-    G.GalleryResizeThrottled =    throttle(GalleryResize, 100, {leading: false});
+    G.GalleryResizeThrottled =    throttle(GalleryResize, 30, {leading: false});
     
     G.blackList =                 null;     // album white list
     G.whiteList =                 null;     // album black list
