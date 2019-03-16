@@ -1420,7 +1420,7 @@
       fullWidth :                 true,
       align :                     'center',
       autoMinimize :              true,
-      standard :                  'minimizeButton,infoButton,shareButton,fullscreenButton',
+      standard :                  'infoButton,shareButton,fullscreenButton',
       minimized :                 'infoButton,shareButton,fullscreenButton'
     },
     viewerTools : {
