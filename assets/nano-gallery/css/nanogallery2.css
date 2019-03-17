@@ -756,7 +756,8 @@
 	-o-box-sizing: border-box;
 }
 .nGY2 .nGY2ViewerMediaPan{
-  transform-origin: 30% 30% 0;
+  /*transform-origin: 50% 50% 0;*//*Änderung*/
+  transform-origin: 70% 70% 0;
   visibility: visible;
   opacity: 1;
   position: absolute;
