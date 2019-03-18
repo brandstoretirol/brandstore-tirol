@@ -31,77 +31,51 @@
   jQuery.nanogallery2.data_google2 = function (instance, fnName){
     var G=instance;      // current nanogallery2 instance
 
-    // ### Picasa/Google+
-    // square format : 32, 48, 64, 72, 104, 144, 150, 160 (cropped)
-    // details: https://developers.google.com/picasa-web/docs/2.0/reference
-    Google = {
-      url: function() {
-        // return ( G.O.picasaUseUrlCrossDomain ? 'https://photos.googleapis.com/data/feed/api/' : 'https://picasaweb.google.com/data/feed/api/');
-        return ( 'https://photos.googleapis.com/data/feed/api/' );
-      },
-      thumbSize: 64,
-      thumbAvailableSizes : new Array(32, 48, 64, 72, 94, 104, 110, 128, 144, 150, 160, 200, 220, 288, 320, 400, 512, 576, 640, 720, 800, 912, 1024, 1152, 1280, 1440, 1600),
-      thumbAvailableSizesCropped : ' 32 48 64 72 104 144 150 160 '
-    };
-    
     
     /** @function AlbumGetContent */
     var AlbumGetContent = function(albumID, fnToCall, fnParam1, fnParam2) {
 
-
-      var url= Google.url() + 'user/'+G.O.userID;
-      var kind= 'image';
-      var albumIdx=NGY2Item.GetIdx(G, albumID);
+      var url = '';
+      var kind = 'image';
+      var albumIdx = NGY2Item.GetIdx(G, albumID);
 
       var maxResults='';
       if( G.galleryMaxItems.Get() > 0 ) {
-        maxResults='&max-results='+G.galleryMaxItems.Get();
+        maxResults = '&max-results=' + G.galleryMaxItems.Get();
       }
       
-      var gat='';   // global authorization (using the Builder)
+      var gat='';   // global authorization (using the BUILDER)
       if( typeof ngy2_pwa_at !== 'undefined' ) {
         gat=ngy2_pwa_at;
       }
       
       if( albumID == 0 ) {
-      // if( G.I[albumIdx].GetID() == 0 ) {
-        // retrieve the list of albums
+        // RETRIEVE THE LIST OF ALBUMS
         if( gat != '' ) {
           // in builder
-          url += '?alt=json&v=3&kind=album&thumbsize='+G.picasa.thumbSizes+maxResults+'&rnd=' + (new Date().getTime()) + '&access_token=' + gat;
+          // url += '?alt=json&v=3&kind=album&deprecation-extension=true&thumbsize='+G.picasa.thumbSizes+maxResults+'&rnd=' + (new Date().getTime()) + '&access_token=' + gat;
+          url = 'https://photoslibrary.googleapis.com/v1/albums';
         }
         else {
-          if( G.O.google2URL == undefined || G.O.google2URL == '' ) {
-            // old Picasa access method (for content before 09/02/2017)
-            url += '?alt=json&v=3&kind=album&thumbsize='+G.picasa.thumbSizes+maxResults+'&rnd=' + (new Date().getTime());
-          }
-          else {
-            // nanogp
-            url=G.O.google2URL + '?nguserid='+G.O.userID+'&alt=json&v=3&kind=album&thumbsize='+G.picasa.thumbSizes+maxResults+'&rnd=' + (new Date().getTime());
-          }
+					// NANOGP2
+					// url=G.O.google2URL + '?nguserid='+G.O.userID+'&alt=json&v=3&kind=album&thumbsize='+G.picasa.thumbSizes+maxResults+'&rnd=' + (new Date().getTime());
+					url = G.O.google2URL + '?nguserid=' + G.O.userID + '&alt=json&v=3&kind=album' + maxResults + '&rnd=' + (new Date().getTime());
         }
         kind='album';
+
       }
       else {
-        // retrieve the content of one album (=photos)
-        var auth='';
-        if( G.I[albumIdx].authkey != '' ) {
-          // private album
-          auth=G.I[albumIdx].authkey;
-        }
+        // RETRIEVE THE CONTENT OF ONE ALBUM (=MEDIAS)
         if( gat != '' ) {
           // in builder
-          url += '/albumid/'+albumID+'?alt=json&kind=photo&thumbsize='+G.picasa.thumbSizes+maxResults+auth+'&imgmax=d&access_token=' + gat;
+          // url += '/albumid/'+albumID+'?alt=json&kind=photo&deprecation-extension=true&thumbsize='+G.picasa.thumbSizes+maxResults+'&imgmax=d&access_token=' + gat;
+          // url += '/albumid/'+albumID+'?alt=json&kind=photo&deprecation-extension=true&thumbsize='+G.picasa.thumbSizes+maxResults+'&imgmax=d&access_token=' + gat;
+          url = 'https://photoslibrary.googleapis.com/v1/mediaItems:search';
         }
         else {
-          if( G.O.google2URL == undefined || G.O.google2URL == '' ) {
-            // old Picasa access method (for content before 09/02/2017)
-            url += '/albumid/'+albumID+'?alt=json&v=3&kind=photo&thumbsize='+G.picasa.thumbSizes+maxResults+'&rnd=' + (new Date().getTime());
-          }
-          else {
             // nanogp
-            url=G.O.google2URL + '?nguserid='+G.O.userID+'&ngalbumid='+albumID+'&alt=json&v=3&kind=photo&thumbsize='+G.picasa.thumbSizes+maxResults+auth+'&imgmax=d';
-          }
+            // url = G.O.google2URL + '?nguserid='+G.O.userID+'&ngalbumid='+albumID+'&alt=json&v=3&kind=photo&thumbsize='+G.picasa.thumbSizes+maxResults+'&imgmax=d';
+            url = G.O.google2URL + '?nguserid=' + G.O.userID + '&ngalbumid=' + albumID + '&alt=json&v=3&kind=photo&' + maxResults;
         }
       }
 
@@ -111,14 +85,20 @@
       jQuery.ajaxSetup({ cache: false });
       jQuery.support.cors = true;
       try {
-        
         var tId = setTimeout( function() {
           // workaround to handle JSONP (cross-domain) errors
           PreloaderDisplay(false);
           NanoAlert('Could not retrieve AJAX data...');
         }, 60000 );
 
-        var GI_getJSONfinished = function(data){
+				jQuery.getJSON( url + '&callback=?', function(data) {
+
+					if( data.nano_status == 'error' ) {
+						clearTimeout(tId);
+						PreloaderDisplay(false);
+						NanoAlert(G, "Could not retrieve Google data. Error: " + data.nano_message);
+						return;
+					}
           clearTimeout(tId);
           PreloaderDisplay(false);
           GoogleParseData( albumIdx, kind, data );
@@ -126,71 +106,19 @@
           if( fnToCall !== null &&  fnToCall !== undefined) {
             fnToCall( fnParam1, fnParam2, null );
           }
-        };
+					
+				})
+				.fail( function(jqxhr, textStatus, error) {
+					clearTimeout(tId);
+					PreloaderDisplay(false);
 
-        var gi_data_loaded = null;
-        // load more than 1000 data (contributor: Giovanni Chiodi)
-        var GI_loadJSON = function(url,start_index){
-          // console.log(url + '&start-index=' + start_index + '&callback=?');
-          jQuery.getJSON( url + '&start-index=' + start_index + '&callback=?', function(data) {
-          
-            if( data.nano_status == 'error' ) {
-              clearTimeout(tId);
-              PreloaderDisplay(false);
-              NanoAlert(G, "Could not retrieve Google data. Error: " + data.nano_message);
-              return;
-            }
-          
-            if (gi_data_loaded===null) {
-              gi_data_loaded = data;
-            }
-            else {
-              gi_data_loaded.feed.entry=gi_data_loaded.feed.entry.concat(data.feed.entry);
-            }
-
-            var cnt=data.feed.openSearch$startIndex.$t+data.feed.openSearch$itemsPerPage.$t;
-            var numItems=0;
-            if( kind == 'image' ) {
-              // retrieve the number of images from one album
-              if( data.feed.gphoto$numphotos === undefined ) {
-                numItems=data.feed.openSearch$totalResults.$t;
-              }
-              else {
-                numItems=data.feed.gphoto$numphotos.$t;
-              }
-            }
-            else {
-              // retrieve the number of images from a list of albums
-              numItems=data.feed.openSearch$totalResults.$t;
-            }
-            
-            // if (data.feed.openSearch$startIndex.$t+data.feed.openSearch$itemsPerPage.$t>=data.feed.openSearch$totalResults.$t){
-            if( cnt >= numItems || cnt >= G.galleryMaxItems.Get() ) {
-              //ok finito
-              GI_getJSONfinished(gi_data_loaded);
-            }
-            else {
-              //ce ne sono ancora da caricare
-              //altra chiamata per il rimanente
-              GI_loadJSON(url, cnt);
-            }
-          })
-          .fail( function(jqxhr, textStatus, error) {
-            clearTimeout(tId);
-            PreloaderDisplay(false);
-
-            var k=''
-            for(var key in jqxhr) {
-              k+= key + '=' + jqxhr[key] +'<br>';
-            }
-            var err = textStatus + ', ' + error + ' ' + k + '<br><br>URL:'+url;
-            NanoAlert(G, "Could not retrieve Google data. Error: " + err);
-
-          });
-          
-        };
-
-        GI_loadJSON(url,1);
+					var k=''
+					for(var key in jqxhr) {
+						k+= key + '=' + jqxhr[key] +'<br>';
+					}
+					var err = textStatus + ', ' + error + ' ' + k + '<br><br>URL:'+url;
+					NanoAlert(G, "Could not retrieve Google data. Error: " + err);
+				});
       }
       catch(e) {
         NanoAlert(G, "Could not retrieve Google data. Error: " + e);
@@ -199,325 +127,194 @@
 
     
     // -----------
-    // Retrieve items from a Google Photos (ex Picasa) data stream
-    // items can be images or albums
+    // Retrieve items from a Google Photos data stream
+    // items can be images/viedos or albums
     function GoogleParseData(albumIdx, kind, data) {
 
       if( G.O.debugMode ) { 
         console.log('Google Photos data:');
         console.dir(data);    
       }
+      var albumID = G.I[albumIdx].GetID();
 
-      var albumID=G.I[albumIdx].GetID();
-
-      if( G.I[albumIdx].title == '' ) {
-        // set title of the album (=> root level not loaded at this time)
-        G.I[albumIdx].title=data.feed.title.$t;
-      }
-      
       // iterate and parse each item
-      jQuery.each(data.feed.entry, function(i,data){
+      jQuery.each(data, function(i,data){
+      
+				if( typeof data === 'object' && data !== null ) {   // only objects
 
-        // Get the title 
-        var imgUrl=data.media$group.media$content[0].url;
-        var itemTitle = data.title.$t;
-
-        
-        // Get the description
-        var filename='';
-        var itemDescription = data.media$group.media$description.$t;
+        var itemDescription = '';
+				var itemTitle = '';
         if( kind == 'image') {
-          // if image, the title contains the image filename -> replace with content of description
-          filename=itemTitle;
-          if( itemDescription != '' ) {
-            itemTitle=itemDescription;
-            itemDescription='';
-          }
-          if( G.O.thumbnailLabel.get('title') != '' ) {
-            // use filename for the title (extract from URL)
-            itemTitle=GetImageTitleFromURL(unescape(unescape(unescape(unescape(imgUrl)))));
-          }
+						itemTitle = data.description;
         }
+				else {
+					itemTitle = data.title;
+				}
+				if( itemTitle == undefined ) {
+					// may happen...
+					itemTitle = '';
+				}
         
-        var itemID = data.gphoto$id.$t;
-        if( !(kind == 'album' && !FilterAlbumName(itemTitle, itemID)) ) {
+        var itemID = data.id;
+        if( kind == 'album' ) {
+					if( !FilterAlbumName(itemTitle, itemID) || data.coverPhotoBaseUrl == undefined ) {
+						return true;
+					}
+				}
 
-          // create ngy2 item
-          var newItem = NGY2Item.New( G, itemTitle, itemDescription, itemID, albumID, kind, '' );
-          
-          // set the image src
-          var src = '';
-          if( kind == 'image' ) {
-            src = imgUrl;
-            if( !G.O.viewerZoom && G.O.viewerZoom != undefined ) {
-              var s = imgUrl.substring(0, imgUrl.lastIndexOf('/'));
-              s = s.substring(0, s.lastIndexOf('/')) + '/';
-              if( window.screen.width >  window.screen.height ) {
-                src=s + 'w' + window.screen.width + '/' + filename;
-              }
-              else {
-                src = s + 'h' + window.screen.height + '/' + filename;
-              }
-            }
-            // image's URL
-            newItem.setMediaURL( src, 'img');
-
-            // image size
-            if( data.gphoto$width !== undefined ) {
-              newItem.imageWidth=parseInt(data.gphoto$width.$t);
-            }
-            if( data.gphoto$height !== undefined ) {
-              newItem.imageHeight=parseInt(data.gphoto$height.$t);
-            }
-
-            if( data.media$group != null && data.media$group.media$credit != null && data.media$group.media$credit.length > 0 ) {
-              newItem.author=data.media$group.media$credit[0].$t;
-            }
-
+				// create ngy2 item
+				var newItem = NGY2Item.New( G, itemTitle, itemDescription, itemID, albumID, kind, '' );
+				
+				var width = 0;
+				var height = 0;
+				
+				// set the image src
+				var src = '';
+				if( kind == 'image' ) {
+					src = data.baseUrl;
+					if( !G.O.viewerZoom && G.O.viewerZoom != undefined ) {
+						if( window.screen.width >  window.screen.height ) {
+							src += '=w' + window.screen.width;
+						}
+						else {
+							src = s + '=h' + window.screen.height;
+						}
+					}
+					else {
+            // use full resolution image
+            src += '=h' + data.mediaMetadata.height + '-w' + data.mediaMetadata.width;
             
-            // exif data
-            if( data.exif$tags !== undefined ) {
-              if( data.exif$tags.exif$exposure != undefined ) {
-                newItem.exif.exposure = data.exif$tags.exif$exposure.$t;
-              }
-              if( data.exif$tags.exif$flash != undefined ) {
-                if( data.exif$tags.exif$flash.$t == 'true' ) {
-                  newItem.exif.flash = 'flash';
-                }
-              }
-              if( data.exif$tags.exif$focallength != undefined ) {
-                newItem.exif.focallength = data.exif$tags.exif$focallength.$t;
-              }
-              if( data.exif$tags.exif$fstop != undefined ) {
-                newItem.exif.fstop = data.exif$tags.exif$fstop.$t;
-              }
-              if( data.exif$tags.exif$iso != undefined ) {
-                newItem.exif.iso = data.exif$tags.exif$iso.$t;
-              }
-              if( data.exif$tags.exif$model != undefined ) {
-                newItem.exif.model = data.exif$tags.exif$model.$t;
-              }
-              
-              // geo location
-              if( data.gphoto$location != undefined ) {
-                newItem.exif.location = data.gphoto$location;
-              }
-            }
-          }
-          else {
-            newItem.author = data.author[0].name.$t;
-            newItem.numberItems = data.gphoto$numphotos.$t;
-          }
+            // use original image
+            // src += '=d';
+					}
+					
+					// image's URL
+					newItem.setMediaURL( src, 'img');
 
-          // set the URL of the thumbnails images
-          newItem.thumbs=GoogleThumbSetSizes('l1', 0, newItem.thumbs, data, kind );
-          newItem.thumbs=GoogleThumbSetSizes('lN', 5, newItem.thumbs, data, kind );
-          
-          // post-process callback
-          var fu = G.O.fnProcessData;
-          if( fu !== null ) {
-            typeof fu == 'function' ? fu(newItem, 'google2', data) : window[fu](newItem, 'google2', data);
-          }
+					// image size
+					if( data.mediaMetadata.width !== undefined ) {
+						newItem.imageWidth = parseInt(data.mediaMetadata.width);
+ 						width = newItem.imageWidth;
+					}
+					if( data.mediaMetadata.height !== undefined ) {
+						newItem.imageHeight=parseInt(data.mediaMetadata.height);
+ 						height = newItem.imageHeight;
+					}
+
+					// if( data.media$group != null && data.media$group.media$credit != null && data.media$group.media$credit.length > 0 ) {
+						// newItem.author=data.media$group.media$credit[0].$t;
+					// }
+
+					// Photo
+					if( data.mediaMetadata.photo !== undefined ) {
+						// exif data
+						if( data.mediaMetadata.photo.exposureTime != undefined ) {
+							newItem.exif.exposure = data.mediaMetadata.photo.exposureTime;
+						}
+						if( data.mediaMetadata.photo.focalLength != undefined ) {
+							newItem.exif.focallength = data.mediaMetadata.photo.focalLength;
+						}
+						if( data.mediaMetadata.photo.apertureFNumber != undefined ) {
+							newItem.exif.fstop = data.mediaMetadata.photo.apertureFNumber;
+						}
+						if( data.mediaMetadata.photo.isoEquivalent != undefined ) {
+							newItem.exif.iso = data.mediaMetadata.photo.isoEquivalent;
+						}
+						if( data.mediaMetadata.photo.cameraModel != undefined ) {
+							newItem.exif.model = data.mediaMetadata.photo.cameraModel;
+						}
+					}
+					
+					// Video
+					if( data.mediaMetadata.video !== undefined ) {
+						if( data.mediaMetadata.video.cameraModel != undefined ) {
+							newItem.exif.model = data.mediaMetadata.video.cameraModel;
+						}
+            
+            newItem.downloadURL = data.baseUrl + '=dv';   // set the download URL for the video
+            
+            // newItem.mediaKind = 'selfhosted';
+            // newItem.mediaMarkup = '<video controls class="nGY2ViewerMedia"><source src="'+ newItem.src +'" type="video/'+ 'video/mp4' +'" preload="auto">Your browser does not support the video tag (HTML 5).</video>';
+					}
+						
+				}
+				else {
+					// newItem.author = data.author[0].name.$t;
+					newItem.numberItems = data.mediaItemsCount;
+				}
+
+				// set the URL of the thumbnails images
+				newItem.thumbs=GoogleThumbSetSizes2('l1', newItem.thumbs, data, kind, height, width );
+				newItem.thumbs=GoogleThumbSetSizes2('lN', newItem.thumbs, data, kind,height ,width );
+				
+				// post-process callback
+				var fu = G.O.fnProcessData;
+				if( fu !== null ) {
+					typeof fu == 'function' ? fu(newItem, 'google2', data) : window[fu](newItem, 'google2', data);
+				}
           
         }
       });
 
       G.I[albumIdx].contentIsLoaded = true;   // album's content is ready
     }
-  
-    
-    
-    /** @function GetHiddenAlbums */
-    var GetHiddenAlbums = function( hiddenAlbums, callback ){
-      var lstAlbums = [].concat( hiddenAlbums );
-      for( var i = 0; i < lstAlbums.length; i++ ) {
-        AlbumAuthkeyGetInfoQueue(lstAlbums[i], callback);
-      }
-      // dequeue sequentially
-      jQuery(document).dequeue('GoogleAlbumWithAuthkey');
-    }
-
-    // Google+ - retrieves private album
-    // The first image is used as the cover image (=album thumbnail)
-    function AlbumAuthkeyGetInfoQueue( albumIDwithAuthkey, callback ) {
-      jQuery(document).queue('GoogleAlbumWithAuthkey', function() {
-
-      var p = albumIDwithAuthkey.indexOf('&authkey=');
-        if( p == -1 ) {
-          p = albumIDwithAuthkey.indexOf('?authkey=');
-        }
-        var albumID = albumIDwithAuthkey.substring(0,p);
-
-        var opt = albumIDwithAuthkey.substring(p);
-        if( opt.indexOf('Gv1sRg') == -1 ) {
-          opt = '&authkey=Gv1sRg'+opt.substring(9);
-        }
-        var url = Google.url() + 'user/'+G.O.userID+'/albumid/'+albumID+'?alt=json&kind=photo'+opt+'&max-results=1&thumbsize='+G.picasa.thumbSizes+'&imgmax=d';
-        
-        PreloaderDisplay(true);
-
-        jQuery.ajaxSetup({ cache: false });
-        jQuery.support.cors = true;
-        
-        var tId = setTimeout( function() {
-          // workaround to handle JSONP (cross-domain) errors
-          PreloaderDisplay(false);
-          NanoAlert(G, 'Could not retrieve AJAX data...');
-        }, 60000 );
-        jQuery.getJSON(url, function(data, status, xhr) {
-          clearTimeout(tId);
-          PreloaderDisplay(false);
-          
-          var albumTitle = data.feed.title.$t;
-          var source = data.feed.entry[0];
-
-          var newItem = NGY2Item.New( G, albumTitle, '', albumID, '0', 'album', '' );
-          
-          newItem.authkey = opt;
-          
-          //Get and set the URLs of the thumbnail
-          newItem.thumbs = GoogleThumbSetSizes('l1', 0, newItem.thumbs, source, 'album' );
-          newItem.thumbs = GoogleThumbSetSizes('lN', 5, newItem.thumbs, source, 'album' );
-   
-          if( typeof G.O.fnProcessData == 'function' ) {
-            G.O.fnProcessData(newItem, 'google', source);
-          }
-//          G.I[1].contentIsLoaded=true;
-          newItem.numberItems = data.feed.gphoto$numphotos.$t;
-
-          // dequeue to process the next google+/picasa private album
-          if( jQuery(document).queue('GoogleAlbumWithAuthkey').length > 0 ) {
-            jQuery(document).dequeue('GoogleAlbumWithAuthkey');
-          }
-          else {
-            callback();
-          }
-
-        })
-        .fail( function(jqxhr, textStatus, error) {
-          clearTimeout(tId);
-          PreloaderDisplay(false);
-          NanoAlert(G, "Could not retrieve ajax data (google): " + textStatus + ', ' + error);
-          jQuery(document).dequeue('GoogleAlbumWithAuthkey');
-        });      
-      });      
-
-    }
 
     // -----------
     // Set thumbnail sizes (width and height) and URLs (for all resolutions (xs, sm, me, la, xl) and levels (l1, lN)
-    function GoogleThumbSetSizes(level, startI, tn, data, kind ) {
+    function GoogleThumbSetSizes2(level, tn, data, kind, height, width ) {
       var sizes=['xs','sm','me','la','xl'];
-      
-      for(var i=0; i<sizes.length; i++ ) {
-        tn.url[level][sizes[i]]=data.media$group.media$thumbnail[startI+i].url;
-        if( kind == 'image' ) {
-          tn.width[level][sizes[i]]=data.media$group.media$thumbnail[startI+i].width;
-          tn.height[level][sizes[i]]=data.media$group.media$thumbnail[startI+i].height;
 
-          var gw=data.media$group.media$thumbnail[startI+i].width;
-          var gh=data.media$group.media$thumbnail[startI+i].height;
+      for(var i=0; i<sizes.length; i++ ) {
+				
+        // media
+				if( kind == 'image' ) {
           if( G.tn.settings.width[level][sizes[i]] == 'auto' ) {
-            if( gh < G.tn.settings.height[level][sizes[i]] ) {
-              // calculate new h/w and change URL
-              var ratio1=gw/gh;
-              tn.width[level][sizes[i]]=gw*ratio1;
-              tn.height[level][sizes[i]]=gh*ratio1;
-              var url=tn.url[level][sizes[i]].substring(0, tn.url[level][sizes[i]].lastIndexOf('/'));
-              url=url.substring(0, url.lastIndexOf('/')) + '/';
-              tn.url[level][sizes[i]]=url+'h'+G.tn.settings.height[level][sizes[i]]+'/';
-            }
-          }
+						var ratio1 = width / height;
+						tn.height[level][sizes[i]] = G.tn.settings.getH(level, sizes[i]);
+						tn.width[level][sizes[i]] = G.tn.settings.getH(level, sizes[i]) * ratio1;
+						tn.url[level][sizes[i]] = data.baseUrl + '=h' + G.tn.settings.getH(level, sizes[i]);
+						continue;
+					}
           if( G.tn.settings.height[level][sizes[i]] == 'auto' ) {
-            if( gw < G.tn.settings.width[level][sizes[i]] ) {
-              // calculate new h/w and change URL
-              var ratio2=gh/gw;
-              tn.height[level][sizes[i]]=gh*ratio2;
-              tn.width[level][sizes[i]]=gw*ratio2;
-              var url=tn.url[level][sizes[i]].substring(0, tn.url[level][sizes[i]].lastIndexOf('/'));
-              url=url.substring(0, url.lastIndexOf('/')) + '/';
-              tn.url[level][sizes[i]]=url+'w'+G.tn.settings.width[level][sizes[i]]+'/';
-            }
-          }
-        }
-        else {
-          // albums
-          // the Google API returns incorrect height/width values
-          if( G.tn.settings.width[level][sizes[i]] != 'auto' ) {
-//            tn.width[level][sizes[i]]=data.media$group.media$thumbnail[startI+i].width;
-          }
-          else {
-            var url=tn.url[level][sizes[i]].substring(0, tn.url[level][sizes[i]].lastIndexOf('/'));
-            url=url.substring(0, url.lastIndexOf('/')) + '/';
-            tn.url[level][sizes[i]]=url+'h'+G.tn.settings.height[level][sizes[i]]+'/';
-          }
-          
-          if( G.tn.settings.height[level][sizes[i]] != 'auto' ) { 
-//            tn.height[level][sizes[i]]=data.media$group.media$thumbnail[startI+i].height;
-          }
-          else {
-              var url=tn.url[level][sizes[i]].substring(0, tn.url[level][sizes[i]].lastIndexOf('/'));
-              url=url.substring(0, url.lastIndexOf('/')) + '/';
-              tn.url[level][sizes[i]]=url+'w'+G.tn.settings.width[level][sizes[i]]+'/';
-          }
+						var ratio1 = height / width;
+						tn.width[level][sizes[i]] = G.tn.settings.getW(level, sizes[i]);
+						tn.height[level][sizes[i]] = G.tn.settings.getW(level, sizes[i]) * ratio1;
+						tn.url[level][sizes[i]] = data.baseUrl + '=w' + G.tn.settings.getW(level, sizes[i]);
+						continue;
+					}
+
+					tn.height[level][sizes[i]] = G.tn.settings.getH(level, sizes[i]);
+					tn.width[level][sizes[i]] = G.tn.settings.getW(level, sizes[i]);
+					tn.url[level][sizes[i]] = data.baseUrl + '=w' + G.tn.settings.getW(level, sizes[i]);
+					
+				}
+
+        // album
+				if( kind == 'album' ) {
+          if( G.tn.settings.width[level][sizes[i]] == 'auto' ) {
+						tn.url[level][sizes[i]]= data.coverPhotoBaseUrl + '=h' + G.tn.settings.getH(level, sizes[i]);
+						continue;
+					}
+          if( G.tn.settings.height[level][sizes[i]] == 'auto' ) {
+						tn.url[level][sizes[i]]= data.coverPhotoBaseUrl + '=w' + G.tn.settings.getW(level, sizes[i]);
+						continue;
+					}
+					var w=G.tn.settings.mosaic[level + 'Factor']['w'][sizes[i]];
+					tn.url[level][sizes[i]]= data.coverPhotoBaseUrl + '=h' + G.tn.settings.getH(level, sizes[i]) + '-w' + G.tn.settings.getW(level, sizes[i]);
+
         }
       }
+        
       return tn;
-    }
+		}
+
 
 
     // -----------
-    // Initialize thumbnail sizes
+    // Initialization
     function Init() {
-      G.picasa = {
-        // cache value in instance to avoid regeneration on each need
-        thumbSizes:''
-      };
-
-      var sfL1=1;
-      if( G.tn.opt.l1.crop === true ) {
-        sfL1=G.O.thumbnailCropScaleFactor;
-      }
-      var sfLN=1;
-      if( G.tn.opt.lN.crop === true ) {
-        sfLN=G.O.thumbnailCropScaleFactor;
-      }
-
-      var st=G.tn.settings;
-      G.picasa.thumbSizes=GoogleAddOneThumbSize(G.picasa.thumbSizes, st.width.l1.xs*sfL1*st.mosaic.l1Factor.w.xs, st.height.l1.xs*sfL1*st.mosaic.l1Factor.h.xs, st.width.l1.xsc, st.height.l1.xsc );
-      G.picasa.thumbSizes=GoogleAddOneThumbSize(G.picasa.thumbSizes, st.width.l1.sm*sfL1*st.mosaic.l1Factor.w.sm, st.height.l1.sm*sfL1*st.mosaic.l1Factor.h.sm, st.width.l1.smc, st.height.l1.smc );
-      G.picasa.thumbSizes=GoogleAddOneThumbSize(G.picasa.thumbSizes, st.width.l1.me*sfL1*st.mosaic.l1Factor.w.me, st.height.l1.me*sfL1*st.mosaic.l1Factor.h.me, st.width.l1.mec, st.height.l1.mec );
-      G.picasa.thumbSizes=GoogleAddOneThumbSize(G.picasa.thumbSizes, st.width.l1.la*sfL1*st.mosaic.l1Factor.w.la, st.height.l1.la*sfL1*st.mosaic.l1Factor.h.la, st.width.l1.lac, st.height.l1.lac );
-      G.picasa.thumbSizes=GoogleAddOneThumbSize(G.picasa.thumbSizes, st.width.l1.xl*sfL1*st.mosaic.l1Factor.w.xl, st.height.l1.xl*sfL1*st.mosaic.l1Factor.h.xl, st.width.l1.xlc, st.height.l1.xlc );
-      G.picasa.thumbSizes=GoogleAddOneThumbSize(G.picasa.thumbSizes, st.width.lN.xs*sfLN*st.mosaic.lNFactor.w.xs, st.height.lN.xs*sfLN*st.mosaic.lNFactor.h.xs, st.width.lN.xsc, st.height.lN.xsc );
-      G.picasa.thumbSizes=GoogleAddOneThumbSize(G.picasa.thumbSizes, st.width.lN.sm*sfLN*st.mosaic.lNFactor.w.sm, st.height.lN.sm*sfLN*st.mosaic.lNFactor.h.sm, st.width.lN.smc, st.height.lN.smc );
-      G.picasa.thumbSizes=GoogleAddOneThumbSize(G.picasa.thumbSizes, st.width.lN.me*sfLN*st.mosaic.lNFactor.w.me, st.height.lN.me*sfLN*st.mosaic.lNFactor.h.me, st.width.lN.mec, st.height.lN.mec );
-      G.picasa.thumbSizes=GoogleAddOneThumbSize(G.picasa.thumbSizes, st.width.lN.la*sfLN*st.mosaic.lNFactor.w.la, st.height.lN.la*sfLN*st.mosaic.lNFactor.h.la, st.width.lN.lac, st.height.lN.lac );
-      G.picasa.thumbSizes=GoogleAddOneThumbSize(G.picasa.thumbSizes, st.width.lN.xl*sfLN*st.mosaic.lNFactor.w.xl, st.height.lN.xl*sfLN*st.mosaic.lNFactor.h.xl, st.width.lN.xlc, st.height.lN.xlc );
     }
     
-    function GoogleAddOneThumbSize(thumbSizes, v1, v2, c1, c2 ) {
-    
-      var v = Math.ceil( v2 * G.tn.scale ) + c2;
-      // if( v1 == 'auto' ) {
-      if( isNaN(v1) ) {
-        v = Math.ceil( v2 * G.tn.scale ) + c2;
-      }
-      // else if( v2 == 'auto' ) {
-      else if( isNaN(v2) ) {
-          v = Math.ceil( v1 * G.tn.scale ) + c1;
-        }
-        else if( v1 > v2 ) {
-          v = Math.ceil( v1 * G.tn.scale ) + c1;
-        }
-        
-      if( thumbSizes.length > 0 ) {
-        thumbSizes += ',';
-      }
-      thumbSizes += v;
-      return thumbSizes;
-    }
-
 
     // shortcuts to NGY2Tools functions (with context)
     var PreloaderDisplay = NGY2Tools.PreloaderDisplay.bind(G);
@@ -528,11 +325,6 @@
     var AlbumPostProcess = NGY2Tools.AlbumPostProcess.bind(G);
  
     switch( fnName ){
-      case 'GetHiddenAlbums':
-        var hiddenAlbums = arguments[2],
-        callback1 = arguments[3];
-        GetHiddenAlbums(hiddenAlbums, callback1);
-        break;
       case 'AlbumGetContent':
         var albumID = arguments[2],
         callback2 = arguments[3],

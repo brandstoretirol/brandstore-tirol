@@ -481,6 +481,7 @@
 	position: relative;
 	overflow:hidden;
   white-space: nowrap;
+  background: white; /*änderung*/
 }
 
 /**************************************/
