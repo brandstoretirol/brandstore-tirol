@@ -51,7 +51,7 @@
 			}
 			
 			bodytext += newline + "Bitte werft einen Blick darauf und gebt mir Bescheid." + newline + "Meine Telefonnummer für Rückfragen:" + newline + 
-						"INFO von BRANDSTORE.TIROL - bitte check in Kürze deinen SPAM Ordner - falls du nichts von uns hörst, liegt unser Mail vielleicht dort";
+						"INFO von BRANDSTORE.TIROL - bitte check in Kürze deinen SPAM Ordner - falls du nichts von uns hörst, liegt unser Mail dort";
 			
 			return encodeURIComponent(bodytext);
 		},
