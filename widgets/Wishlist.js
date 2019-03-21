@@ -50,7 +50,7 @@
 				bodytext += "#" + (i+1) + ". " + value.dispname + ": " + value.number + ', ' + value.color + ', ' + value.size + newline;
 			}
 			
-			bodytext += newline + "Bitte werft einen Blick darauf und gebt mir Bescheid." + newline;
+			bodytext += newline + "Bitte werft einen Blick darauf und gebt mir Bescheid." + newline + "Meine Telefonnummer für Rückfragen:" + newline;
 			
 			return encodeURIComponent(bodytext);
 		},
