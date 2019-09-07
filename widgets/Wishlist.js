@@ -50,7 +50,7 @@
 				bodytext += "#" + (i+1) + ". " + value.dispname + ": " + value.number + ', ' + value.color + ', ' + value.size + newline;
 			}
 			
-			bodytext += newline + "Bitte werft einen Blick darauf und gebt mir Bescheid." + newline + "Meine Telefonnummer für Rückfragen:" + newline + 
+			bodytext += newline + "Bitte werft einen Blick darauf und gebt mir Bescheid." + newline + newline + "Meine Telefonnummer für Rückfragen:" + newline + newline +
 						"INFO von BRANDSTORE.TIROL - bitte check in Kürze deinen SPAM Ordner - falls du nichts von uns hörst, liegt unser Mail vielleicht dort.";
 			
 			return encodeURIComponent(bodytext);
