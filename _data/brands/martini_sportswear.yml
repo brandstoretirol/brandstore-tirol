@@ -2,9 +2,7 @@
 martini_sportswear:
 - title: MARTINI SPORTSWEAR
   url: martini_sportswear
-  info:
-  info2:
-  info3: <b>NUR DIE BESTEN MATERIALIEN!</b>
+  info: <b>NUR DIE BESTEN MATERIALIEN!</b>
         <br>
         Martini Sportswear achtet bei ihren Produkten auf einen ausgesuchten Mix von Materialien, die für ihre 
         hervorragenden Eigenschaften bekannt sind. Die Technologien von 
@@ -18,6 +16,8 @@ martini_sportswear:
         modernen Martini-Style, sondern sind auch langlebig, pflegeleicht, flexibel und multifunktionell einsetzbar, 
         wetterfest, atmungsaktiv und unterstützen dich bei all deinen sportlichen Aktivitäten. Deshalb eigenen sich 
         unsere Kollektionen perfekt für sämtliche Outdoorsportarten bei jedem Wetter.
+  info2:
+  info3:
 
 # Impressionen
 impressionen_martini_sportswear:
