@@ -63,8 +63,7 @@
 			
 			var mailto_link = 'mailto:' + email + '?subject=' + subject + '&body=' + body_message;
 
-			win = window.open(mailto_link, 'emailWindow');
-			if (win && win.open && !win.closed) win.close();
+			location.href = mailto_link;
 		},
 		
 		_handleEmailButtonVisibility: function(){
