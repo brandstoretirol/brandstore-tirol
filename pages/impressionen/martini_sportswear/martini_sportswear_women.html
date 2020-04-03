@@ -58,6 +58,65 @@ ambassador: brands.martini_sportswear.martini_sportswear_women.martini_sportswea
 	
 <div class="container">
 
+	div class="row">
+	<div class="col s12">
+		{% for martini_sportswear_women in site.data.brands.martini_sportswear_groups.martini_sportswear_women.martini_sportswear_women %}
+			<h6>DAMENKOLLEKTION SOMMER LAGERND</h6>
+			<hr style="margin-left: 0px;margin-right: 0px;">
+		{% endfor %}
+		</div>
+	</div>		
+
+	<div class="row">
+		<div class="col s12">
+			
+			<!-- BMS Gallery -->
+			<div id="womenGallery" data-nanogallery2='{
+					"thumbnailWidth": "auto",
+					"thumbnailBorderVertical": 1,
+					"thumbnailBorderHorizontal": 1,
+					"colorScheme": {
+						"thumbnail": {
+							"background": "rgba(0,0,0,1)"
+						}
+					},
+					"thumbnailLabel": {
+						"position": "onBottom",
+						"displayDescription": false,
+						"descriptionMultiLine": true
+					},
+					"allowHTMLinData": true,
+					"galleryDisplayMode": "pagination",
+					"galleryMaxRows": 3,
+					"thumbnailAlignment": "center",
+					"gallerySorting": "titleasc",
+					"galleryFilterTags": "description",
+					"thumbnailLevelUp": true,
+					"thumbnailToolbarImage" : { "topLeft":"cart"}
+				}'>
+				{% include gallery/gallery_content_women_on_stock.html %}
+			</div>
+			<script>
+				function shoppingCartUpdatedListener(e) {
+					var gallery =  $(this);				
+					var currentImage = null;
+					
+					var basket = gallery.nanogallery2('shoppingCartGet');
+					for(var i = 0; i < basket.length; i++){
+						var item = basket[i];
+						
+						currentImage = item.idx; // immer den zuletzt hinzugefügten artikel nehmen
+					}
+					
+					gallery.nanogallery2('ItemDisplayInfo', gallery.nanogallery2('data').items[currentImage]);
+				} 
+
+				$("#womenGallery").on( 'shoppingCartUpdated.nanogallery2', shoppingCartUpdatedListener );
+			</script>
+
+
+
+
 	<!-- Gallery 1 -->
 	<div class="row">
 		<div class="col s12">
