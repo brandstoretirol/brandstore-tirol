@@ -1,19 +1,11 @@
 # montura_women
 montura_women:
 - title: FÜR UNSERE GUTEN SEELEN
-  info: >
-        Outfit ist ein Impuls. Modisch und sportlich. Davon sind wir von Martini Sportswear überzeugt. Deshalb designen wir mit Funktion, 
-        Individualität und typischer Lässigkeit. Wir bringen Materialien und Features in perfekten Kombinationen, optimaler Performance und mit Farbvielfalt&#58; 
-        Trendiges helles Granny, Surf und Bubblegum treffen auf kräftiges Pink, DunkelblauTiger und Orchid. Ein Klassiker ist Black & White. So feminin soll der 
-        Sommer 2019 sein.
-        <br>
-        Coole Shirts, die Optiken unique, sleeveless, kurzarm, leichte, lässige Hosen und technische Varianten für jeden alpinen Anspruch. 
-        Komfort und Passform kompromisslos weiblich. Dazu ein ausgesuchter Materialmix&#58;  Superleichte Midlayer, lässige Technofleece-Teile, 
-        Stretch/Primaloftkombinationen, leichteste Funktionsmaterialien für Hybrid-Jacken, hauchdünnes PrimaLoft® Gold.
+  info: 
   info2: 
   img-url: assets/img/banner/montura_brandlogo.png
   url: montura_women
-  hashtag: "&#35;designyoursports &#35;lebdeilebn"
+  hashtag: "&#35;theergonomicequpage &#35;searchinganeway &#35;lebdeilebn"
   links: 
         <u><a class="grey-text" href="https://brandstore.tirol/montura_men">HERREN</a></u>
         # <u><a class="white-text" href="https://shop.brandstore.at">ONLINESHOP</a></u>
