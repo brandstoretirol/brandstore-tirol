@@ -115,9 +115,123 @@ ambassador: brands.montura.montura_women.montura_women
 				$("#womenGallery").on( 'shoppingCartUpdated.nanogallery2', shoppingCartUpdatedListener );
 			</script>
 
+	<!-- Gallery 2 -->
+	
+	<div class="row">
+		<div class="col s12">
+		{% for montura_women in site.data.brands.montura_groups.montura_women.montura_women %}
+			<h6>DAMENKOLLEKTION FRÜHJAHR | SOMMER | HERBST</h6>
+			<hr style="margin-left: 0px;margin-right: 0px;">
+		{% endfor %}
+		</div>
+	</div>
+
+			<!-- BMS Gallery OLD -->
+			<div id="womenGallerNew" data-nanogallery2='{
+				"thumbnailWidth": "auto",
+				"thumbnailBorderVertical": 1,
+				"thumbnailBorderHorizontal": 1,
+				"colorScheme": {
+					"thumbnail": {
+						"background": "rgba(0,0,0,1)"
+					}
+				},
+				"thumbnailLabel": {
+					"position": "onBottom",
+					"displayDescription": false,
+					"descriptionMultiLine": true
+				},
+				"allowHTMLinData": true,
+				"galleryDisplayMode": "pagination",
+				"galleryMaxRows": 3,
+				"thumbnailAlignment": "center",
+				"gallerySorting": "titleasc",
+				"galleryFilterTags": "description",
+				"thumbnailLevelUp": true,
+				"thumbnailToolbarImage" : { "topLeft":"cart"}
+			}'>
+			{% include gallery/gallery_content_women.html %}
+		</div>
+		<script>
+		function shoppingCartUpdatedListener(e) {
+			var gallery =  $(this);				
+			var currentImage = null;
+			
+			var basket = gallery.nanogallery2('shoppingCartGet');
+			for(var i = 0; i < basket.length; i++){
+				var item = basket[i];
+				
+				currentImage = item.idx; // immer den zuletzt hinzugefügten artikel nehmen
+			}
+			
+			gallery.nanogallery2('ItemDisplayInfo', gallery.nanogallery2('data').items[currentImage]);
+		}
+
+		$("#womenGallerNew").on( 'shoppingCartUpdated.nanogallery2', shoppingCartUpdatedListener );
+		</script>
+
+
+
+		<!-- Gallery 3 -->
+					
+		<div class="row">
+			<div class="col s12">
+			{% for montura_women in site.data.brands.montura_groups.montura_women.montura_women %}
+				<h6>DAMENKOLLEKTION FRÜHJAHR | HERBST | WINTER</h6>
+				<hr style="margin-left: 0px;margin-right: 0px;">
+			{% endfor %}
+			</div>
+		</div>
+
+				<!-- BMS Gallery OLD -->
+				<div id="womenGalleryold" data-nanogallery2='{
+					"thumbnailWidth": "auto",
+					"thumbnailBorderVertical": 1,
+					"thumbnailBorderHorizontal": 1,
+					"colorScheme": {
+						"thumbnail": {
+							"background": "rgba(0,0,0,1)"
+						}
+					},
+					"thumbnailLabel": {
+						"position": "onBottom",
+						"displayDescription": false,
+						"descriptionMultiLine": true
+					},
+					"allowHTMLinData": true,
+					"galleryDisplayMode": "pagination",
+					"galleryMaxRows": 3,
+					"thumbnailAlignment": "center",
+					"gallerySorting": "titleasc",
+					"galleryFilterTags": "description",
+					"thumbnailLevelUp": true,
+					"thumbnailToolbarImage" : { "topLeft":"cart"}
+				}'>
+				{% include gallery/gallery_content_women_old.html %}
+			</div>
+			<script>
+			function shoppingCartUpdatedListener(e) {
+				var gallery =  $(this);				
+				var currentImage = null;
+				
+				var basket = gallery.nanogallery2('shoppingCartGet');
+				for(var i = 0; i < basket.length; i++){
+					var item = basket[i];
+					
+					currentImage = item.idx; // immer den zuletzt hinzugefügten artikel nehmen
+				}
+				
+				gallery.nanogallery2('ItemDisplayInfo', gallery.nanogallery2('data').items[currentImage]);
+			}
+
+			$("#womenGalleryold").on( 'shoppingCartUpdated.nanogallery2', shoppingCartUpdatedListener );
+			</script>
+
+
+	
 			<!-- google gallery
 			<div class="tabs" style="background-color: black;">
-					{% for impression in site.data.brands.martini_sportswear_groups.martini_sportswear_women.impressionen_martini_sportswear_women %}
+					{% for impression in site.data.brands.montura_groups.montura_women.impressionen_montura_women %}
 						<li class="tab col s3"><a id="anchor_{{impression.id}}" href="#galleryContainer" onclick="init_gallery('{{impression.albumID}}')" class="white-text" style="border-bottom-color: black;">{{impression.collections}}</a></li>
 					{% endfor %}
 			</div> -->
