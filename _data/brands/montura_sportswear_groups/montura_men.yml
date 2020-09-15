@@ -25,7 +25,7 @@ montura_men:
   greetings:
 
 # IMPRESSIONEN
-impressionen_montura_women:
+impressionen_montura_men:
   - collections: "JACKEN"
     id: jacken
     #albumID: "6568492807137784609"
