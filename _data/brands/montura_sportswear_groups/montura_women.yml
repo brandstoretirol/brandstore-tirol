@@ -11,18 +11,16 @@ montura_women:
         Komfort und Passform kompromisslos weiblich. Dazu ein ausgesuchter Materialmix&#58;  Superleichte Midlayer, lässige Technofleece-Teile, 
         Stretch/Primaloftkombinationen, leichteste Funktionsmaterialien für Hybrid-Jacken, hauchdünnes PrimaLoft® Gold.
   info2: 
-  img-url: assets/img/banner/martini_sportswear_brandlogo.png
-  url: martini_sportswear_women
+  img-url: assets/img/banner/montura_brandlogo.png
+  url: montura_women
   hashtag: "&#35;designyoursports &#35;lebdeilebn"
   links: 
-        <u><a class="grey-text" href="https://brandstore.tirol/martini_sportswear_men">HERREN</a></u>
-        <u><a class="grey-text" href="https://brandstore.tirol/martini_sportswear_kids">KIDS</a></u>
-        <u><a class="grey-text" href="https://brandstore.tirol/martini_sportswear_accessoires">ACCESSOIRES</a></u>
+        <u><a class="grey-text" href="https://brandstore.tirol/montura_men">HERREN</a></u>
         # <u><a class="white-text" href="https://shop.brandstore.at">ONLINESHOP</a></u>
   greetings:
 
 # IMPRESSIONEN
-impressionen_martini_sportswear_women:
+impressionen_montura_women:
   - collections: "JACKEN"
     id: jacken
     #albumID: "6568492807137784609"
