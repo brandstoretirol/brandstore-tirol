@@ -61,7 +61,8 @@ ambassador: brands.martini_sportswear.martini_sportswear_accessoires.martini_spo
 	<div class="row">
 		<div class="col s12">
 		{% for martini_sportswear_accessoires in site.data.brands.martini_sportswear_groups.martini_sportswear_accessoires.martini_sportswear_accessoires %}
-			<h6>ACCESSOIRES SOMMER</h6>
+			<!-- <h6>ACCESSOIRES SOMMER</h6> -->
+			<h6>ACCESSOIRES WINTER</h6>
 			<hr style="margin-left: 0px;margin-right: 0px;">
 		{% endfor %}
 		</div>
@@ -94,7 +95,7 @@ ambassador: brands.martini_sportswear.martini_sportswear_accessoires.martini_spo
 					"thumbnailLevelUp": true,
 					"thumbnailToolbarImage" : { "topLeft":"cart"}
 				}'>
-				{% include gallery/gallery_content_accessoires.html %}
+				{% include gallery/gallery_content_accessoires_winter.html %}
 			</div>
 			<script>
 			function shoppingCartUpdatedListener(e) {
@@ -119,7 +120,8 @@ ambassador: brands.martini_sportswear.martini_sportswear_accessoires.martini_spo
 	<div class="row">
 		<div class="col s12">
 		{% for martini_sportswear_accessoires in site.data.brands.martini_sportswear_groups.martini_sportswear_accessoires.martini_sportswear_accessoires %}
-			<h6>ACCESSOIRES WINTER</h6>
+			<!-- <h6>ACCESSOIRES WINTER</h6> -->
+			<h6>ACCESSOIRES SOMMER</h6>
 			<hr style="margin-left: 0px;margin-right: 0px;">
 		{% endfor %}
 		</div>
@@ -149,7 +151,7 @@ ambassador: brands.martini_sportswear.martini_sportswear_accessoires.martini_spo
 				"thumbnailLevelUp": true,
 				"thumbnailToolbarImage" : { "topLeft":"cart"}
 			}'>
-			{% include gallery/gallery_content_accessoires_old.html %}
+			{% include gallery/gallery_content_accessoires_summer.html %}
 		</div>
 		<script>
 		function shoppingCartUpdatedListener(e) {
