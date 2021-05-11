@@ -121,7 +121,7 @@
 		
 		_loadGalleries: function(){
 			
-			xhr("/martini_galleries", {
+			xhr("/wishlist_galleries", {
 				handleAs: "string"
 			}).then(lang.hitch(this, function(result){
 				domAttr.set(this.galleriesContainerNode, "innerHTML", result);
