@@ -16,7 +16,7 @@ susi_kimmel:
   hashtag: "<b>&#35;lebdeilebn</b>"
   links: 
         <u><a class="grey-text" href="https://brandstore.tirol/your_shop">DEIN SHOP</a></u>
-        <u><a class="grey-text" href="https://brandstore.tirol/ambassador">BOTSCHAFTER</a></u>
+        #<u><a class="grey-text" href="https://brandstore.tirol/ambassador">BOTSCHAFTER</a></u>
         <u><a class="grey-text" href="https://brandstore.tirol/partnership">PARTNERSCHAFT</a></u>
         <u><a class="grey-text" href="https://brandstore.tirol/individual_companydesign">INDIVIDUALITÄT</a></u>
         <u><a class="grey-text" href="https://brandstore.tirol/black_limited">BLACK LIMITED</a></u>
