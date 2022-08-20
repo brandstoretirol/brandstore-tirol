@@ -2,9 +2,9 @@
   img-url: assets/img/logos/bs_logo_black_hoch_neu.png
   url: your_shop
 
-- title: BOTSCHAFTER
-  img-url: assets/img/logos/bs_logo_black_hoch_neu.png
-  url: ambassador
+#- title: BOTSCHAFTER
+ # img-url: assets/img/logos/bs_logo_black_hoch_neu.png
+  #url: ambassador
 
 - title: PARTNERSCHAFT
   img-url: assets/img/logos/bs_logo_black_hoch_neu.png
