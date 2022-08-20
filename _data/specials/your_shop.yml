@@ -16,8 +16,7 @@ your_shop:
   info2: 
   url: your_shop
   hashtag: "<b>&#35;aufaguadezeit</b>"
-  links: 
-        #<u><a class="grey-text" href="https://brandstore.tirol/ambassador">BOTSCHAFTER</a></u>
+  links:
         <u><a class="grey-text" href="https://brandstore.tirol/partnership">PARTNERSCHAFT</a></u>
         <u><a class="grey-text" href="https://brandstore.tirol/individual_companydesign">INDIVIDUALITÄT</a></u>
         <u><a class="grey-text" href="https://brandstore.tirol/susi_kimmel">SUSI KIMMEL</a></u>
