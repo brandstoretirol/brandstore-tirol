@@ -38,10 +38,10 @@ shop_info:
   greetings: Euer Tom!
 
 # IMPRESSIONEN
-impressionen_shop: 
-  - collections: AKTUELLES
-    id: aktuelles
-    albumID: "ADS3_dagU2FYVX18BO_vEnEfaqvPFbfz1EvfjntdEWDCYb7UyuK0fDnaFpStM87Q1sA7Tr4NL39v"
+#impressionen_shop: 
+ # - collections: AKTUELLES
+  #  id: aktuelles
+   # albumID: "ADS3_dagU2FYVX18BO_vEnEfaqvPFbfz1EvfjntdEWDCYb7UyuK0fDnaFpStM87Q1sA7Tr4NL39v"
     #albumID: "6568094183311223217"
 
 
