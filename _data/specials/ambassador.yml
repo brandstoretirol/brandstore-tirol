@@ -29,8 +29,8 @@ ambassador:
   greetings:
 
 # IMPRESSIONEN
-impressionen_ambassador:
-  - collections: "&#35;lebdeilebn"
-    id: aktuelles
-    albumID: "ADS3_dYX3E0L91xOxn_JaKiha54dgz77HcDbGsHA-xd0JNqJLYqhMenLg6QNPdYg6PRsx3fb3UhM"
+#impressionen_ambassador:
+ # - collections: "&#35;lebdeilebn"
+  #  id: aktuelles
+   # albumID: "ADS3_dYX3E0L91xOxn_JaKiha54dgz77HcDbGsHA-xd0JNqJLYqhMenLg6QNPdYg6PRsx3fb3UhM"
     #albumID: "6565168299633493377"

@@ -61,8 +61,8 @@ ambassador_marie_luise_muehlhuber:
   greetings:
 
 # IMPRESSIONEN
-impressionen_ambassador_marie_luise_muehlhuber:
-  - collections: "MARIE"
-    id: marie
-    albumID: "ADS3_dYg3wPoZ8YbXbT5o4bsIWqRNmJmFFhZlJHf5gK9eL5a0HKCk2GAXAwNpnTK0LYYQF7Wl7a6"
+#impressionen_ambassador_marie_luise_muehlhuber:
+ # - collections: "MARIE"
+  #  id: marie
+   # albumID: "ADS3_dYg3wPoZ8YbXbT5o4bsIWqRNmJmFFhZlJHf5gK9eL5a0HKCk2GAXAwNpnTK0LYYQF7Wl7a6"
     #albumID: "6576875621671157953"

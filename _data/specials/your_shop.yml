@@ -25,8 +25,8 @@ your_shop:
   greetings:
 
 # IMPRESSIONEN
-impressionen_your_shop:
-  - collections: "&#35;aufaguadezeit"
-    id: aktuelles
-    albumID: "ADS3_dYbiOjVAWIXj6wVGkeki8d4UmkiGU6I7Jl8FhrAQ_3sZuL8TwwX3fKXMdD2mHSwNaKdVDpe"
+#impressionen_your_shop:
+ # - collections: "&#35;aufaguadezeit"
+  #  id: aktuelles
+   # albumID: "ADS3_dYbiOjVAWIXj6wVGkeki8d4UmkiGU6I7Jl8FhrAQ_3sZuL8TwwX3fKXMdD2mHSwNaKdVDpe"
     #albumID: "6569144106452093697"

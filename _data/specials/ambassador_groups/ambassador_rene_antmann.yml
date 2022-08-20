@@ -26,8 +26,8 @@ ambassador_rene_antmann:
   greetings:
 
 # IMPRESSIONEN
-impressionen_ambassador_rene_antmann:
-  - collections: "RENE"
-    id: rene
-    albumID: "ADS3_dZbQ_Le0_yvh1ldRe9bOktYllsBgdwz05t4TvFOPg-A--dTWOmk98TnRCrVqEml-_arQbow"
+#impressionen_ambassador_rene_antmann:
+ # - collections: "RENE"
+  #  id: rene
+   # albumID: "ADS3_dZbQ_Le0_yvh1ldRe9bOktYllsBgdwz05t4TvFOPg-A--dTWOmk98TnRCrVqEml-_arQbow"
     #albumID: "6623974692217644465"
