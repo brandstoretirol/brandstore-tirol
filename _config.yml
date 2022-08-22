@@ -48,3 +48,6 @@ plugins:
 collections:
     news:
         output: true
+include:
+  - "_*.html"
+  - "_*.js"
