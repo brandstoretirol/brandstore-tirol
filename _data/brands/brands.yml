@@ -5,10 +5,10 @@
   img-url: assets/img/banner/montura_brandlogo.png
 
 # MARTINI SPORTSWEAR
-- id: martini_sportswear
-  title: MARTINI SPORTSWEAR
-  url: martini_sportswear   
-  img-url: assets/img/banner/martini_sportswear_brandlogo.png
+#- id: martini_sportswear
+#  title: MARTINI SPORTSWEAR
+#  url: martini_sportswear   
+#  img-url: assets/img/banner/martini_sportswear_brandlogo.png
 
   # Impressionen
   impressionen: 
