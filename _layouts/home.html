@@ -3,7 +3,38 @@ layout: default
 title: Home
 ---
 
-<img style="max-width: 95%;" class="" src="{{ '/assets/img/website_lager.jpg' | prepend: site.baseurl }}" alt="">
+<style>
+
+.container {
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+}
+  
+li {
+  display: inline-block;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+ 
+li span {
+  display: block;
+}
+ 
+.emoji {
+  display: none;
+  padding: 1rem;
+}
+ 
+.emoji span {
+  font-size: 4rem;
+  padding: 0 .5rem;
+}
+
+</style>
+
+<img style="max-width: 55%;" class="" src="{{ '/assets/img/shop_closing.png' | prepend: site.baseurl }}" alt="">
 <div style="font-weight: bold;">
 	ZELLER BERG 2/888<br/>
 	6330 KUFSTEIN/TIROL<br/>
@@ -11,12 +42,38 @@ title: Home
 
 
 <div style="margin-top: 64px; font-size: x-large;">
-	Öffnungszeiten MO - SO<br/>
-	nach Terminvereinbarung<br/><br/>
+Liebe Alle!
+ 
+Erstmal mege mega danke für eure Unterstützung und die lieben Worte! Der vergangene MEGA SALE war ein voller Erfolg.
+ 
+Uns haben zahlreiche Nachrichten erreicht was uns dazu bewegt hat, doch noch einen ** CHRISTMAS MEGA SALE ** zu machen.
+Vielleicht können wir dann doch noch das eine oder andere Lächeln unter dem Weihnachtsbaum hervorzaubern.
+Ist ja grad alles nicht ganz lustig!
+ <br/><br/>
+<span style="font-size: 32px;">SAVE THE DATE.... </span><br/><span style="color: red; font-size: 32px;">VOM 06.12.2023 bis 09.12.2023</span><br/><span style="font-size: 32px;">der letzte ** CHRISTMAS MEGA SALE **</span>
+
+<br/><br/>
 	
-	Du erreichst mich unter der <br/>
+	<div class="container">
+		<h1 id="headline"><font color="red">**CRISTMAS MEGA SALE**</font></h1>
+		<div id="countdown">
+		<ul>
+		<li><span id="days"></span>Tage</li>
+		<li><span id="hours"></span>Stunden</li>
+		<li><span id="minutes"></span>Minuten</li>
+		<li><span id="seconds"></span>Sekunden</li>
+		</ul>
+		</div>
+		<div id="content" class="emoji">
+		<span>🥳</span>
+		<span>🎉</span>
+		<span>🎂</span>
+		</div>
+	</div>
+	
+	Für Infos oder Fragen schick mir einfach eine WhatsApp oder ruf mich an!<br/>
+	Du erreichst mich unter der
 	<a href="tel:+436608182310">+43 660 818 2310</a><br/><br/>
-	Schick mir einfach eine WhatsApp oder ruf mich an und sichere Dir einen Termin für Deinen MEGA SALE! 
 <div>
 
 <div style="margin-top: 64px; font-size: x-large;">
@@ -28,3 +85,47 @@ title: Home
 		<img style="" class="" src="{{ '/assets/img/fb_insta.png' | prepend: site.baseurl }}" alt="">
 	</a>
 <div>	
+
+<script>
+(function () {
+  const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+ 
+  //I'm adding this section so I don't have to keep updating this pen every year :-)
+  //remove this if you don't need it
+  let today = new Date(),
+      dd = String(today.getDate()).padStart(2, "0"),
+      mm = String(today.getMonth() + 1).padStart(2, "0"),
+      yyyy = today.getFullYear(),
+      nextYear = yyyy + 1,
+      dayMonth = "12/05/",
+      birthday = dayMonth + yyyy;
+  today = mm + "/" + dd + "/" + yyyy;
+  if (today > birthday) {
+    birthday = dayMonth + nextYear;
+  }
+  //end
+  const countDown = new Date(birthday).getTime(),
+      x = setInterval(function() {    
+ 
+        const now = new Date().getTime(),
+              distance = countDown - now;
+ 
+        document.getElementById("days").innerText = Math.floor(distance / (day)),
+          document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+          document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+          document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+ 
+        //do something later when date is reached
+        if (distance < 0) {
+          document.getElementById("headline").innerText = "It's my birthday!";
+          document.getElementById("countdown").style.display = "none";
+          document.getElementById("content").style.display = "block";
+          clearInterval(x);
+        }
+        //seconds
+      }, 0)
+  }());
+</script>
