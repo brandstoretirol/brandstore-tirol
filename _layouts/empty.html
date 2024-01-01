@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="{{ site.lang | default: "de-DE" }}">
+  <head>
+    <title>
+      {% if page.title != null %} 
+        {{ page.title }} | {{ site.title }} 
+      {% else %} 
+        TOM | {{ site.title }} 
+      {% endif %} 
+    </title>
+    <meta charset="uf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Styles -->
+    
+    <link rel="stylesheet" href="{{ '/assets/css/materialize.css ' | prepend: site.baseurl }}">
+    <link rel="icon" type="image/png" href="https://brandstore.at/Images/fav-icon-192x192.png" sizes="192x192" />
+	<style>
+		.center {
+		  display: block;
+		  margin-left: auto;
+		  margin-right: auto;
+		}
+	</style>
+    
+    
+  </head>
+  <body class="black">
+
+	<div class="black white-text center" style="">
+		<div class="container mainbody">
+			{{ content }}
+		</div>  
+	
+	
+	</div>
+
+  </body>
+</html>
